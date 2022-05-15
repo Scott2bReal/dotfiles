@@ -9,8 +9,9 @@
 general {
         colors = true
         interval = 5
-        color_good = '#b8bb26'
-        color_degraded = '#d79921'
+        # color_good = '#b8bb26'
+        color_good = '#a9b665'
+        color_degraded ='#d79921'
         color_bad = '#fb4934'
 
 }
@@ -40,7 +41,8 @@ ethernet _first_ {
 battery 0 {
         format = "%status %percentage %remaining"
         status_chr = "⚡ CHR"
-        status_full = "🔋 FULL"
+        # status_full = "🔋 FULL"
+        status_full = "FULL"
         status_unk = "? UNK"
         #format = "%status %percentage %remaining"
 }
@@ -62,15 +64,18 @@ memory {
 
 tztime local {
         #format = "%Y-%m-%d %H:%M:%S"
-        format = " 🗓️ %m/%d 🕖 %H:%M"
+        # format = " 🗓️ %m/%d 🕖 %H:%M"
+        format = "%H:%M on %m/%d"
 }
 
 cpu_usage {
-        format = " 🧠 %usage"
+        # format = " 🧠 %usage"
+        format = "CPU: %usage"
         max_threshold = 75
 }
 
 cpu_temperature 0 {
-       format = "🌡%degrees °C"
+       # format = "🌡%degrees °C"
+       format = "%degrees °C"
        path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/*/temp1_input"
 }
