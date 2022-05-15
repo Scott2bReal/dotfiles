@@ -1,0 +1,25 @@
+# Autotype email address
+alt + shift + e
+    sleep .25; xdotool key h o e c k e r s at g m a i l period c o m
+
+alt + shift + a
+    xdotool key a r c h l i n u x
+
+alt + shift + d
+    xdotool key slash r space 1 d 2 0 plus
+
+# Make sxhkd reload its configuration files:
+alt + Escape
+    pkill -USR1 -x sxhkd
+
+# FA Ops Signature
+alt + shift + s
+  xdotool key C h e e r s comma enter S c o t t enter enter F i r s t space A s c e n t space O p e r a t i o n s space T e a m
+
+# Vacc code
+super + q
+  xdotool key numbersign numbersign V A C numbersign numbersign
+
+# Questions
+alt + shift + q
+  xdotool key P l e a s e space l e t space m e space k n o w space i f space y o u space h a v e space a n y space q u e s t i o n s exclam
