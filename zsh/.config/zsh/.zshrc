@@ -16,13 +16,15 @@ source "$ZDOTDIR/zsh-functions"
 
 # Source config files
 zsh_add_file "zsh-exports"
-# zsh_add_file "zsh-vim-mode"
+zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "hlissner/zsh-autopair"
+# zsh_add_plugin "Aloxaf/fzf-tab"
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
 
@@ -31,14 +33,13 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist
-# compinit
+compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-
 
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
@@ -64,7 +65,7 @@ bindkey -r "^d"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-compinit
+# compinit
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
