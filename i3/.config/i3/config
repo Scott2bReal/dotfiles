@@ -198,14 +198,14 @@ bar {
     colors {
       # Whole color settings
       background #282828
-      statusline #ebdbb2
+      statusline #dfbf8e
       separator  #666666
 
 
-      focused_workspace  #98971a #98971a #ebdbb2
-      active_workspace   #98971a #98971a #ebdbb2
-      inactive_workspace #504945 #504945 #ebdbb2
-      urgent_workspace   #cc241d #cc241d #504945
+      focused_workspace  #a9b665 #a9b665 #dfbf8e
+      active_workspace   #a9b665 #89b482 #dfbf8e
+      inactive_workspace #504945 #504945 #dfbf8e
+      urgent_workspace   #ea6962 #ea6962 #504945
   }
         status_command i3status
         position top
