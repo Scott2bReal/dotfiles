@@ -252,7 +252,7 @@ bindsym --release $mod+shift+g exec TogglDesktop
 
 ### Gaps ###
 smart_gaps on
-#gaps inner 5
-#gaps outer 5
-#gaps top 5
-#gaps bottom 5
+# gaps inner 5
+# gaps outer 5
+# gaps top 5
+# gaps bottom 5

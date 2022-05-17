@@ -29,8 +29,9 @@ order += "tztime local"
 
 wireless _first_ {
         #format_up = "W: (%quality at %essid) %ip"
-        format_up = "%quality at %essid"
-        format_down = "W: down"
+        # format_up = "%quality at %essid"
+        format_up = "%quality at %essid"
+        format_down = " down"
 }
 
 ethernet _first_ {
@@ -40,15 +41,15 @@ ethernet _first_ {
 
 battery 0 {
         format = "%status %percentage %remaining"
-        status_chr = "⚡ CHR"
-        # status_full = "🔋 FULL"
-        status_full = "FULL"
-        status_unk = "? UNK"
+        status_chr = ""
+        status_full = ""
+        # status_unk = "? UNK"
+        status_unk = ""
         #format = "%status %percentage %remaining"
 }
 
 disk "/" {
-        format = "🖴 %avail"
+        format = "ﴖ %avail"
 }
 
 load {
@@ -70,7 +71,7 @@ tztime local {
 
 cpu_usage {
         # format = " 🧠 %usage"
-        format = "CPU: %usage"
+        format = " %usage"
         max_threshold = 75
 }
 
