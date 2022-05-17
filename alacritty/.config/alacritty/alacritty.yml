@@ -724,7 +724,7 @@
   #
   # See `cursor.style` for available options.
   vi_mode_style:
-    shape: Underline
+    shape: Block
 
   # Cursor blinking interval in milliseconds.
   #blink_interval: 750
