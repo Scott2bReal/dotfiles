@@ -230,7 +230,7 @@ default_border pixel 3
 
 # Run polybar on startup
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh --forest
-#exec_always --no-startup-id bash ~/polybar-themes/simple/forest/scripts/styles.sh --gruvbox
+exec_always --no-startup-id bash ~/polybar-themes/simple/forest/scripts/styles.sh --gruvbox
 # set up a desktop background on startup
 # exec_always --no-startup-id feh --bg-scale ~/desktop-backgrounds/penguin_gruv_rainbow.png
 # enable brightness control
