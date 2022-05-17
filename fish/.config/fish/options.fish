@@ -1,4 +1,5 @@
-set fish_cursor_default underscore
+# set -g fish_cursor_default underscore blink
+set fish_force_cursor underscore blink
 
 # Set default editor to neovim
 set -gx EDITOR /usr/bin/nvim
