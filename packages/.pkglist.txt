@@ -82,6 +82,7 @@ ranger
 rate-mirrors
 ripgrep
 rofi
+rust
 scdoc
 scrot
 sed
@@ -95,7 +96,6 @@ sxhkd
 terminus-font
 texinfo
 tmux
-toggldesktop-git
 traceroute
 ttf-dejavu
 ttf-icomoon-feather
