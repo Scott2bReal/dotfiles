@@ -27,6 +27,7 @@ findutils
 firefox
 fish
 flex
+font-manager
 fzf
 gawk
 gcc
@@ -82,7 +83,6 @@ ranger
 rate-mirrors
 ripgrep
 rofi
-rust
 scdoc
 scrot
 sed

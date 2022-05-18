@@ -288,7 +288,7 @@ disabled = false
 
 [git_branch]
 format = 'on [$symbol$branch(:$remote_branch)]($style) '
-symbol = ' '
+symbol = ' '
 style = 'blue'
 truncation_length = 9223372036854775807
 truncation_symbol = '…'
@@ -694,7 +694,8 @@ detect_folders = ['.Rproj.user']
 [ruby]
 format = 'via [$symbol($version )]($style)'
 version_format = 'v${raw}'
-symbol = '💎 '
+# symbol = '💎 '
+symbol = ' '
 style = 'red'
 disabled = false
 detect_extensions = ['rb']
