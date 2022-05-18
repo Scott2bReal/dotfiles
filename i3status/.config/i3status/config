@@ -13,7 +13,7 @@ general {
         color_good = '#a9b665'
         color_degraded ='#d79921'
         color_bad = '#fb4934'
-
+        separator = ''
 }
 
 #order += "ipv6"
@@ -30,8 +30,8 @@ order += "tztime local"
 wireless _first_ {
         #format_up = "W: (%quality at %essid) %ip"
         # format_up = "%quality at %essid"
-        format_up = "%quality at %essid"
-        format_down = " down"
+        format_up = "[%quality at %essid]"
+        format_down = "[ down]"
 }
 
 ethernet _first_ {
@@ -40,7 +40,7 @@ ethernet _first_ {
 }
 
 battery 0 {
-        format = "%status %percentage %remaining"
+        format = "[%status %percentage %remaining]"
         status_chr = ""
         status_full = ""
         # status_unk = "? UNK"
@@ -49,16 +49,16 @@ battery 0 {
 }
 
 disk "/" {
-        format = "ﴖ %used"
+        format = "[ﴖ %avail]"
 }
 
 load {
-        format = "%1min"
+        format = "[%1min]"
 }
 
 memory {
         #format = "%used / %available"
-        format = "%used / %total"
+        format = "[%used / %total]"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -66,17 +66,18 @@ memory {
 tztime local {
         #format = "%Y-%m-%d %H:%M:%S"
         # format = " 🗓️ %m/%d 🕖 %H:%M"
-        format = "%H:%M on %m/%d"
+        # format = "%H:%M on %m/%d"
+        format = "[ %m/%d |  %H:%M] "
 }
 
 cpu_usage {
         # format = " 🧠 %usage"
-        format = " %usage"
+        format = "[ %usage]"
         max_threshold = 75
 }
 
 cpu_temperature 0 {
        # format = "🌡%degrees °C"
-       format = "%degrees °C"
+       format = "[%degrees °C]"
        path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/*/temp1_input"
 }
