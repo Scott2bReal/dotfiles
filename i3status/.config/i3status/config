@@ -49,9 +49,9 @@ battery 0 {
         path = "/sys/class/power_supply/BAT1/uevent"
 }
 
-disk "/" {
-        format = "[ﴖ %avail]"
-}
+# disk "/" {
+#         format = "[ﴖ %avail]"
+# }
 
 load {
         format = "[%1min]"
@@ -59,7 +59,7 @@ load {
 
 memory {
         #format = "%used / %available"
-        format = "[%used / %total]"
+        format = "[ %used / %total]"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -68,7 +68,7 @@ tztime local {
         #format = "%Y-%m-%d %H:%M:%S"
         # format = " 🗓️ %m/%d 🕖 %H:%M"
         # format = "%H:%M on %m/%d"
-        format = "[ %m/%d |  %H:%M] "
+        format = "[  %a %m/%d |  %H:%M] "
 }
 
 cpu_usage {
@@ -79,7 +79,7 @@ cpu_usage {
 
 cpu_temperature 0 {
        # format = "🌡%degrees °C"
-       format = "[%degrees °C]"
+       format = "[ %degrees °C]"
        # path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/*/temp1_input"
        path = "/sys/class/thermal/thermal_zone0/temp"
 }
