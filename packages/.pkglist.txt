@@ -143,6 +143,7 @@ usbutils
 vi
 vim
 vlc
+volumeicon
 wget
 which
 wpa_supplicant
