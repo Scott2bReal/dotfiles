@@ -79,5 +79,6 @@ cpu_usage {
 cpu_temperature 0 {
        # format = "🌡%degrees °C"
        format = "[%degrees °C]"
-       path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/*/temp1_input"
+       # path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/*/temp1_input"
+       path = "/sys/class/thermal/thermal_zone0/temp"
 }
