@@ -204,7 +204,7 @@ bar {
     workspace_min_width 30
     font pango:FiraCode Nerd Font 7.5
     separator_symbol  /
-    # tray_output none
+    # tray_output primary
     # font pango:Iosevka 8.0
 
     # i3bar keybinds
@@ -249,7 +249,7 @@ default_border pixel 3
 exec --no-startup-id sudo ~/scripts/brightness.sh
 # enable sxhkd
 exec --no-startup-id sxhkd
-exec --no-startup-id volumicon
+exec --no-startup-id volumeicon
 
 ## Custom keymaps ##
 
