@@ -74,6 +74,7 @@ modemmanager
 mupdf
 musescore
 ncdu
+ncspot
 neofetch
 neovim
 nerd-fonts-fira-code
