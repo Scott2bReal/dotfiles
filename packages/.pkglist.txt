@@ -45,6 +45,7 @@ git
 gnu-netcat
 gptfdisk
 grub
+gruvbox-material-gtk-theme-git
 heroku-cli
 highlight
 htop
@@ -62,6 +63,7 @@ libtool
 libxft-bgra
 linux
 linux-firmware
+lxappearance
 lynx
 m4
 make
@@ -126,6 +128,7 @@ starship
 stow
 sudo
 sxhkd
+sysstat
 texinfo
 thefuck
 tmux
