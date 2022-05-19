@@ -198,6 +198,7 @@ for_window [class="epsxe"] floating enable
 # finds out, if available)
 bar {
     # General i3bar configs
+    id main
     position top
     status_command i3status
     strip_workspace_numbers yes
@@ -223,6 +224,33 @@ bar {
       urgent_workspace   #ea6962 #ea6962 #504945
   }
 }
+
+# bar {
+#   # Toggle showing system tray
+#     position top
+#     id tray
+#     status_command i3status
+#     strip_workspace_numbers yes
+#     workspace_min_width 30
+#     font pango:FiraCode Nerd Font 7.5
+#     separator_symbol /
+#     mode hide
+#     hidden_state hide
+#     modifier Mod1+Shift
+#     bindsym Mod1+Shift+t bar mode toggle tray
+#
+#     colors {
+#       background #282828
+#       statusline #dfbf8e
+#       separator #d3869b
+#       # separator  #666666
+#
+#       focused_workspace  #a9b665 #a9b665 #504945
+#       active_workspace   #a9b665 #a9b665 #504945
+#       inactive_workspace #504945 #504945 #dfbf8e
+#       urgent_workspace   #ea6962 #ea6962 #504945
+#   }
+# }
 
 ## Custom Colors ##
 
