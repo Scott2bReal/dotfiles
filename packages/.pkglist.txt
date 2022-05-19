@@ -107,7 +107,6 @@ python-pip
 pywal-git
 quick-lint-js
 ranger
-rate-mirrors
 redshift
 reflector
 rmlint
