@@ -19,7 +19,7 @@ set $mod Mod1
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 8
-font pango:FiraCode Nerd Font 7.5
+font pango:FiraCode Nerd Font 8.0
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -202,7 +202,7 @@ bar {
     status_command i3status
     strip_workspace_numbers yes
     workspace_min_width 30
-    font pango:FiraCode Nerd Font 7.5
+    font pango:FiraCode Nerd Font 8.0
     separator_symbol  /
     # tray_output none
     # font pango:Iosevka 8.0
