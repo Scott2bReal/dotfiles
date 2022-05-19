@@ -202,7 +202,10 @@ bar {
     status_command i3status
     strip_workspace_numbers yes
     workspace_min_width 30
-    font pango:FiraCode Nerd Font 7.0
+    font pango:FiraCode Nerd Font 7.5
+    separator_symbol  /
+    # tray_output none
+    # font pango:Iosevka 8.0
 
     # i3bar keybinds
     bindsym button4 nop
@@ -211,7 +214,8 @@ bar {
     colors {
       background #282828
       statusline #dfbf8e
-      separator  #666666
+      separator #d3869b
+      # separator  #666666
 
       focused_workspace  #a9b665 #a9b665 #504945
       active_workspace   #a9b665 #a9b665 #504945
@@ -250,7 +254,7 @@ exec --no-startup-id volumicon
 ## Custom keymaps ##
 
 # Take a screenshot with scrot (use mouse to select area)
-bindsym --release $mod+shift+z exec scrot '%Y-%m-%d_$wx$h.png' -s 'mv $f ~/shots/'
+bindsym --release $mod+shift+p exec scrot -s
 
 # Launch firefox
 bindsym --release $mod+i exec firefox
