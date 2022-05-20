@@ -9,6 +9,7 @@ asciiquarium
 autoconf
 automake
 avidemux-qt
+awesome
 base
 bash-pipes
 bat
