@@ -122,6 +122,7 @@ shfmt
 siji-git
 slack-desktop
 speedtest-cli
+spotify
 spotify-tui
 spotifyd
 sqlitebrowser
