@@ -303,6 +303,7 @@ exec --no-startup-id sudo ~/scripts/brightness.sh
 # enable sxhkd
 exec --no-startup-id sxhkd
 exec --no-startup-id volumeicon
+exec --no-startup-id picom
 
 ## Custom keymaps ##
 

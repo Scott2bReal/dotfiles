@@ -74,11 +74,11 @@ local modkey = "Mod4"
 awful.layout.layouts = {
   -- awful.layout.suit.floating,
   awful.layout.suit.tile,
-  awful.layout.suit.tile.left,
-  awful.layout.suit.tile.bottom,
-  awful.layout.suit.tile.top,
-  awful.layout.suit.fair,
-  awful.layout.suit.fair.horizontal,
+  -- awful.layout.suit.tile.left,
+  -- awful.layout.suit.tile.bottom,
+  -- awful.layout.suit.tile.top,
+  -- awful.layout.suit.fair,
+  -- awful.layout.suit.fair.horizontal,
   awful.layout.suit.spiral,
   -- awful.layout.suit.spiral.dwindle,
   -- awful.layout.suit.max,
@@ -195,14 +195,15 @@ awful.screen.connect_for_each_screen(function(s)
 
   -- Each screen has its own tag table.
   -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-  local names = { "", "", "ﭮ", "", "", "", "", "", "" }
+  -- ﭮ
+  local names = { "", "", "", "", "", "", "", "", "" }
   local l = awful.layout.suit
   local layouts = {
     l.spiral,
     l.spiral,
     l.tile,
     l.max,
-    l.max.fullscreen,
+    l.max,
     l.spiral,
     l.spiral,
     l.tile,
