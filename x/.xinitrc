@@ -53,5 +53,5 @@ fi
 touchpad_ctl
 unclutter &
 ~/.fehbg &
-# exec i3
-exec awesome
+exec i3
+# exec awesome
