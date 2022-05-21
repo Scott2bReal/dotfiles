@@ -254,10 +254,34 @@ bar {
 # }
 
 ## Custom Colors ##
+  # colors:
+  #   primary:
+  #     background: '#282828'
+  #     foreground: '#dfbf8e'
+  #
+  #   normal:
+  #     black:   '#665c54'
+  #     red:     '#ea6962'
+  #     green:   '#a9b665'
+  #     yellow:  '#e78a4e'
+  #     blue:    '#7daea3'
+  #     magenta: '#d3869b'
+  #     cyan:    '#89b482'
+  #     white:   '#dfbf8e'
+  #
+  #   bright:
+  #     black:   '#928374'
+  #     red:     '#ea6962'
+  #     green:   '#a9b665'
+  #     yellow:  '#e3a84e'
+  #     blue:    '#7daea3'
+  #     magenta: '#d3869b'
+  #     cyan:    '#89b482'
+  #     white:   '#dfbf8e'
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #b1b793 #bdae93 #1d2021 #d65d0e   #bdae93
-client.focused_inactive #333333 #282828 #ffffff #484e50   #b1b793
+client.focused          #89b482 #dfbf8e #1d2021 #89b482   #d3869b
+client.focused_inactive #333333 #282828 #ffffff #484e50   #89b482
 client.unfocused        #282828 #282828 #888888 #292d2e   #282828
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -265,7 +289,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Window border configs
-hide_edge_borders smart
+# hide_edge_borders smart
 title_align center
 default_border pixel 3
 
@@ -292,8 +316,8 @@ bindsym --release $mod+Shift+t exec synclient TouchpadOff=1
 bindsym --release $mod+Shift+s exec slack
 
 ### Gaps ###
-smart_gaps on
-# gaps inner 5
-# gaps outer 5
-# gaps top 5
-# gaps bottom 5
+# smart_gaps on
+gaps inner 7
+gaps outer 7
+gaps top 7
+gaps bottom 7
