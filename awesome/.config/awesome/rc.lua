@@ -80,11 +80,11 @@ awful.layout.layouts = {
   awful.layout.suit.fair,
   awful.layout.suit.fair.horizontal,
   awful.layout.suit.spiral,
-  awful.layout.suit.spiral.dwindle,
-  awful.layout.suit.max,
+  -- awful.layout.suit.spiral.dwindle,
+  -- awful.layout.suit.max,
   awful.layout.suit.max.fullscreen,
-  awful.layout.suit.magnifier,
-  awful.layout.suit.corner.nw,
+  -- awful.layout.suit.magnifier,
+  -- awful.layout.suit.corner.nw,
   -- awful.layout.suit.corner.ne,
   -- awful.layout.suit.corner.sw,
   -- awful.layout.suit.corner.se,
@@ -279,6 +279,7 @@ root.buttons(gears.table.join(
 ))
 -- }}}
 
+require "keybinds"
 -- {{{ Key bindings
 globalkeys = gears.table.join(
   awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
@@ -534,11 +535,11 @@ awful.rules.rules = {
   },
 
   -- Add titlebars to normal clients and dialogs
-  { rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = true } },
+  { rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
 
   -- Set Firefox to always map on the tag named "2" on screen 1.
-  -- { rule = { class = "Firefox" },
-  --   properties = { screen = 1, tag = "2" } },
+  { rule = { class = "Firefox" },
+    properties = { screen = 1, tag = "2" } },
 }
 -- }}}
 
