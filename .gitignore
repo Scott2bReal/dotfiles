@@ -4,3 +4,6 @@ lazygit/.config/lazygit/state.yml
 zsh/.config/zsh/plugins
 zsh/.config/zsh/.zcompdump
 ncspot/.config/ncspot/userstate.cbor
+awesome/.config/awesome/themes/default/background.png
+awesome/.config/awesome/themes/default/background_white.png
+awesome/.config/awesome/themes/default/submenu.png
