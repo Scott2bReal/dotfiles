@@ -12,7 +12,7 @@ local altkey = "Mod1"
 local keys = {}
 
 -- {{{ Mouse bindings
-root.buttons(gears.table.join(
+keys.buttons(gears.table.join(
   awful.button({}, 3, function()
     mymainmenu:toggle()
   end),
@@ -22,7 +22,7 @@ root.buttons(gears.table.join(
 -- }}}
 
 -- {{{ Key bindings
-globalkeys = gears.table.join(
+keys.globalkeys = gears.table.join(
   awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
   awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
   awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
@@ -118,7 +118,7 @@ globalkeys = gears.table.join(
   end, { description = "show the menubar", group = "launcher" })
 )
 
-clientkeys = gears.table.join(
+keys.clientkeys = gears.table.join(
   awful.key({ modkey }, "f", function(c)
     c.fullscreen = not c.fullscreen
     c:raise()
@@ -220,3 +220,5 @@ clientbuttons = gears.table.join(
 -- Set keys
 root.keys(globalkeys)
 -- }}}
+
+return keys
