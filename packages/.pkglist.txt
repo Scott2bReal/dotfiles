@@ -5,6 +5,7 @@ anki
 asciiquarium
 autoconf
 automake
+awesome-git
 base
 bat
 binutils
