@@ -36,6 +36,9 @@ git
 grep
 groff
 grub
+gruvbox-material-gtk-theme-git
+gruvbox-material-icon-theme-git
+gtk-engine-murrine
 gzip
 hamster-time-tracker
 heroku-cli
@@ -49,6 +52,7 @@ libx11
 libxft-bgra
 linux
 linux-firmware
+lxappearance
 m4
 make
 man-db
@@ -73,6 +77,7 @@ pacman
 pacman-contrib
 patch
 pavucontrol
+picom
 pipes.sh
 pkgconf
 poppler

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-center '/home/scott/desktop-backgrounds/arch-gruvbox-logo.png' 
+feh --no-fehbg --bg-center '/home/scott/dotfiles/fehbg/minimal_cat_left.png'
