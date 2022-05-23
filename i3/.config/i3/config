@@ -19,7 +19,7 @@ set $mod Mod1
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 8
-font pango:FiraCode Nerd Font 8.0
+font pango:FiraCode Nerd Font 7.5
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -113,16 +113,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
+set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:ﭮ"
 set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
-set $ws8 "8:"
-set $ws9 "9:"
-set $ws10 "10:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:磊"
+set $ws10 "10:阮"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -198,13 +198,15 @@ for_window [class="epsxe"] floating enable
 # finds out, if available)
 bar {
     # General i3bar configs
+    id main
     position top
     status_command i3status
+    # status_command i3blocks
     strip_workspace_numbers yes
     workspace_min_width 30
-    font pango:FiraCode Nerd Font 8.0
+    font pango:FiraCode Nerd Font 7.5
     separator_symbol  /
-    # tray_output none
+    # tray_output primary
     # font pango:Iosevka 8.0
 
     # i3bar keybinds
@@ -224,11 +226,62 @@ bar {
   }
 }
 
+# bar {
+#   # Toggle showing system tray
+#     position top
+#     id tray
+#     status_command i3status
+#     strip_workspace_numbers yes
+#     workspace_min_width 30
+#     font pango:FiraCode Nerd Font 7.5
+#     separator_symbol /
+#     mode hide
+#     hidden_state hide
+#     modifier Mod1+Shift
+#     bindsym Mod1+Shift+t bar mode toggle tray
+#
+#     colors {
+#       background #282828
+#       statusline #dfbf8e
+#       separator #d3869b
+#       # separator  #666666
+#
+#       focused_workspace  #a9b665 #a9b665 #504945
+#       active_workspace   #a9b665 #a9b665 #504945
+#       inactive_workspace #504945 #504945 #dfbf8e
+#       urgent_workspace   #ea6962 #ea6962 #504945
+#   }
+# }
+
 ## Custom Colors ##
+  # colors:
+  #   primary:
+  #     background: '#282828'
+  #     foreground: '#dfbf8e'
+  #
+  #   normal:
+  #     black:   '#665c54'
+  #     red:     '#ea6962'
+  #     green:   '#a9b665'
+  #     yellow:  '#e78a4e'
+  #     blue:    '#7daea3'
+  #     magenta: '#d3869b'
+  #     cyan:    '#89b482'
+  #     white:   '#dfbf8e'
+  #
+  #   bright:
+  #     black:   '#928374'
+  #     red:     '#ea6962'
+  #     green:   '#a9b665'
+  #     yellow:  '#e3a84e'
+  #     blue:    '#7daea3'
+  #     magenta: '#d3869b'
+  #     cyan:    '#89b482'
+  #     white:   '#dfbf8e'
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #b1b793 #bdae93 #1d2021 #d65d0e   #bdae93
-client.focused_inactive #333333 #282828 #ffffff #484e50   #b1b793
+client.focused          #89b482 #dfbf8e #1d2021 #89b482   #d3869b
+client.focused_inactive #333333 #282828 #ffffff #484e50   #89b482
 client.unfocused        #282828 #282828 #888888 #292d2e   #282828
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -236,7 +289,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Window border configs
-hide_edge_borders smart
+# hide_edge_borders smart
 title_align center
 default_border pixel 3
 
@@ -249,7 +302,8 @@ default_border pixel 3
 exec --no-startup-id sudo ~/scripts/brightness.sh
 # enable sxhkd
 exec --no-startup-id sxhkd
-exec --no-startup-id volumicon
+exec --no-startup-id volumeicon
+exec --no-startup-id picom
 
 ## Custom keymaps ##
 
@@ -263,8 +317,8 @@ bindsym --release $mod+Shift+t exec synclient TouchpadOff=1
 bindsym --release $mod+Shift+s exec slack
 
 ### Gaps ###
-smart_gaps on
-# gaps inner 5
-# gaps outer 5
-# gaps top 5
-# gaps bottom 5
+# smart_gaps on
+gaps inner 7
+gaps outer 7
+gaps top 7
+gaps bottom 7
