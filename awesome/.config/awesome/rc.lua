@@ -58,6 +58,12 @@ end
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.init("~/.config/awesome/theme.lua")
 
+user = {
+  terminal = "alacritty",
+  browser = "firefox",
+  editor = "alacritty --class editor -e nvim"
+}
+
 -- This is used later as the default terminal and editor to run.
 local terminal = "alacritty"
 local editor = os.getenv("EDITOR") or "nano"

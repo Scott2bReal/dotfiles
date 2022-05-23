@@ -168,6 +168,7 @@ xorg-fonts-misc
 xorg-iceauth
 xorg-mkfontscale
 xorg-server
+xorg-server-xephyr
 xorg-sessreg
 xorg-smproxy
 xorg-x11perf
