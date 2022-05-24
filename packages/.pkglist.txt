@@ -46,6 +46,7 @@ heroku-cli
 htop
 hugo
 i3-gaps
+i3blocks
 i3status
 lazygit
 libtool
