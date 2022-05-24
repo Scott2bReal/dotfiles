@@ -291,7 +291,7 @@ client.background       #ffffff
 # Window border configs
 # hide_edge_borders smart
 title_align center
-default_border pixel 3
+default_border pixel 0
 
 # Run polybar on startup
 # exec_always --no-startup-id bash ~/.config/polybar/launch.sh --forest
@@ -304,6 +304,11 @@ exec --no-startup-id sudo ~/scripts/brightness.sh
 exec --no-startup-id sxhkd
 exec --no-startup-id volumeicon
 exec --no-startup-id picom
+
+# i3 layouts - More layout options
+# https://github.com/eliep/i3-layouts
+# set $i3l spiral to workspace $ws1
+# exec i3-layouts
 
 ## Custom keymaps ##
 
