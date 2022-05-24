@@ -1,7 +1,80 @@
+# [i3-focusedwindow]
+# label=[]=
+# command=~/.config/i3blocks/scripts/i3-focusedwindow 20
+# interval=persist
+
+# [mediaplayer]
+# command=~/.config/i3blocks/scripts/mediaplayer
+# # instance=spotify
+# interval=5
+# signal=10
+
+[spotify]
+min_width=Buttom=?
+command=~/.config/i3blocks/scripts/spotifyd_dbus $buttom
+color=#a9b665
+interval=10
+
+[cpu_usage]
+command=~/.config/i3blocks/scripts/cpu_usage
+interval=10
+LABEL=
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+COLOR_NORMAL=#a9b665
+COLOR_WARN=#e3a84e
+COLOR_CRIT=#ea6962
+
+[memory]
+command=~/.config/i3blocks/scripts/memory
+# label=MEM
+label=
+interval=30
+
+[battery]
+command=~/.config/i3blocks/scripts/battery
+interval=30
+# LABEL=BAT
+LABEL=
+# BAT_NUMBER=0AC_COLOR=#e3a84e
+
 [temperature]
-command=./scripts/temperature
-label=TEMP
+command=~/.config/i3blocks/scripts/temperature
+# label=TEMP
+label=
 interval=10
 #T_WARN=70
 #T_CRIT=90
 #SENSOR_CHIP=""
+
+[wifi]
+command=~/.config/i3blocks/scripts/wifi
+label=
+INTERFACE=wlan0
+interval=10
+
+[rofi-calendar]
+command=~/.config/i3blocks/scripts/rofi-calendar
+interval=1
+BAR_POSITION=top
+WEEK_START=sunday
+DATEFTM=+ %a, %B %d at %H:%M:%S
+#SHORTFMT=+%d/%m/%Y
+LABEL=
+FONT=Fira Code Nerd Font 10
+#LEFTCLICK_PREV_MONTH=false
+#PREV_MONTH_TEXT=« previous month «
+#NEXT_MONTH_TEXT=» next month »
+#ROFI_CONFIG_FILE=/dev/null
+
+# [calendar]
+# command=~/.config/i3blocks/scripts/calendar
+# interval=1
+# LABEL=
+# DATEFMT=+%H:%M:%S on %a %B %d
+# # DATEFMT=+%H:%M:%S
+# # SHORTFMT=+%H:%M:%S
+# HEIGHT=180
+# WIDTH=220
