@@ -133,7 +133,7 @@ slack-desktop
 speedtest-cli
 spotify
 spotify-tui
-spotifyd
+spotifyd-full-git
 sqlitebrowser
 starship
 stow
