@@ -49,6 +49,7 @@ hugo
 i3-gaps
 i3blocks
 i3status
+iw
 lazygit
 libtool
 libx11
@@ -101,6 +102,7 @@ starship
 stow
 sudo
 sxhkd
+sysstat
 terminus-font
 texinfo
 tmux
@@ -122,6 +124,7 @@ xclip
 xdotool
 xorg-server
 xorg-xinit
+yad
 yay
 zoom
 zoxide

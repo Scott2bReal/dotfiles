@@ -52,19 +52,19 @@ END {
 	}
 	# full text
 	if (percent == "true" ) {
-		printf("%.1fG/%.1fG (%.f%%)\n", used, total, pct)
+		printf(" %.1fG/%.1fG (%.f%%)\n", used, total, pct)
 	} else {
-		printf("%.1fG/%.1fG\n", used, total)
+		printf(" %.1fG/%.1fG\n", used, total)
 	}
 	# short text
-	printf("%.f%%\n", pct)
+	printf(" %.f%%\n", pct)
 	# color
 	if (pct > 90) {
-		print("#FF0000")
+		print("#ea6962")
 	} else if (pct > 80) {
-		print("#FFAE00")
+		print("#e3a84e")
 	} else if (pct > 70) {
-		print("#FFF600")
+		print("#e78a4e")
 	}
 }
 ' /proc/meminfo
