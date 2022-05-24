@@ -1,6 +1,20 @@
+[memory]
+command=~/.config/i3blocks/scripts/memory
+# label=MEM
+label=
+interval=30
+
+[battery]
+command=~/.config/i3blocks/scripts/battery
+interval=30
+# LABEL=BAT
+LABEL=⚡
+#BAT_NUMBER=0AC_COLOR=#535353
+
 [temperature]
-command=./scripts/temperature
-label=TEMP
+command=~/.config/i3blocks/scripts/temperature
+# label=TEMP
+label=
 interval=10
 #T_WARN=70
 #T_CRIT=90
