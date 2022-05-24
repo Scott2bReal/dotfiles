@@ -280,7 +280,7 @@ bar {
   #     white:   '#dfbf8e'
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #89b482 #dfbf8e #1d2021 #89b482   #d3869b
+client.focused          #89b482 #dfbf8e #1d2021 #89b482   #282828
 client.focused_inactive #333333 #282828 #ffffff #484e50   #89b482
 client.unfocused        #282828 #282828 #888888 #292d2e   #282828
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -318,7 +318,7 @@ bindsym --release $mod+Shift+s exec slack
 
 ### Gaps ###
 # smart_gaps on
-gaps inner 7
-gaps outer 7
-gaps top 7
-gaps bottom 7
+gaps inner 5
+gaps outer 5
+gaps top 5
+gaps bottom 5
