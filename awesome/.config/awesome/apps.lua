@@ -14,4 +14,6 @@ apps.browser = function ()
   awful.spawn(user.browser, { switchtotag = true })
 end
 
+apps.terminal = "alacritty"
+
 return apps

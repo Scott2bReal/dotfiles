@@ -527,6 +527,7 @@ clientbuttons = gears.table.join(
 
 -- Set keys
 root.keys(globalkeys)
+-- root.keys(require("keys"))
 -- }}}
 
 -- {{{ Rules
