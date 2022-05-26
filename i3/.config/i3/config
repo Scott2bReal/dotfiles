@@ -319,7 +319,7 @@ bindsym --release $mod+Shift+s exec slack
 
 ### Gaps ###
 # smart_gaps on
-gaps inner 7
-gaps outer 7
-gaps top 7
-gaps bottom 7
+gaps inner 9
+gaps outer 3
+gaps top 3
+gaps bottom 3
