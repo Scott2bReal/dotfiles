@@ -41,7 +41,7 @@ elsif ($acpi !~ /: ([\w\s]+), (\d+)%/) {
 
 $status = $1;
 $percent = $2;
-$full_text = "$label$percent%";
+$full_text = "$label  $percent%";
 
 if ($status eq 'Discharging') {
 	$full_text .= ' DIS';
@@ -77,13 +77,13 @@ print "$short_text\n";
 if ($status eq 'Discharging') {
 
 	if ($percent < 20) {
-		print "#FF0000\n";
+		print "#ea6962\n";
 	} elsif ($percent < 40) {
-		print "#FFAE00\n";
+		print "#e78a4e\n";
 	} elsif ($percent < 60) {
-		print "#FFF600\n";
+		print "#e3a84e\n";
 	} elsif ($percent < 85) {
-		print "#A8FF00\n";
+		print "#a9b665\n";
 	}
 
 	if ($percent < 5) {
