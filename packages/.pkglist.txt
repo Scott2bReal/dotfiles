@@ -3,7 +3,6 @@ acpi
 acpid
 alacritty
 alsa-utils
-anki
 apache
 arch-install-scripts
 archey3
