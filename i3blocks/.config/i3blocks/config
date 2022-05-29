@@ -10,6 +10,11 @@ interval=5
 signal=10
 label=
 
+[updates]
+command=~/.config/i3blocks/scripts/updates.sh
+# command=checkupdates | wc -l
+interval=1800
+
 [battery]
 command=~/.config/i3blocks/scripts/battery
 interval=30
@@ -50,16 +55,7 @@ label=
 INTERFACE=wlan0
 interval=10
 
-[rofi-calendar]
-command=~/.config/i3blocks/scripts/rofi-calendar
+[date/time]
+command=~/.config/i3blocks/scripts/date.sh
 interval=1
-BAR_POSITION=top
-WEEK_START=sunday
-DATEFTM=+ %a, %B %d at %H:%M:%S
-#SHORTFMT=+%d/%m/%Y
-LABEL=
-FONT=Fira Code Nerd Font 10
-#LEFTCLICK_PREV_MONTH=false
-#PREV_MONTH_TEXT=« previous month «
-#NEXT_MONTH_TEXT=» next month »
-#ROFI_CONFIG_FILE=/dev/null
+label=
