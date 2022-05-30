@@ -48,11 +48,35 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# DWM Status functions
+
+upds() {
+  upds=$(checkupdates | wc -l)
+  echo " $upds/"
+  sleep 30m
+}
+
+# DWM display available updates
+# while true; do
+#   upds=$(checkupdates | wc -l)
+#   # xsetroot -name "$(echo  "$upds"/)"
+#   xsetroot -name " $(echo $upds)"
+#   sleep 30m
+# done &
+
+# DWM display time/date
+while true; do
+  # xsetroot -name ("$date -s +'%a, %B %d at %H:%M:%S'")
+  xsetroot -name "$(date +'%a, %B %d at %H:%M:%S')"
+  # xsetroot -name "$(date)"
+  sleep 1s
+done &
+
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
 
 touchpad_ctl
 unclutter &
 ~/.fehbg &
-exec i3
-# exec dwm
+# exec i3
+exec dwm
 # exec awesome
