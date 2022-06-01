@@ -77,7 +77,9 @@ done &
 touchpad_ctl
 unclutter &
 ~/.fehbg &
-picom &
-# exec i3
-exec dwm
+# picom &
+# volumeicon &
+# nm-applet &
+exec i3
+# exec dwm
 # exec awesome

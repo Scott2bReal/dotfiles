@@ -16,7 +16,7 @@ bash-pipes
 bat
 binutils
 bison
-bpytop
+btop
 calc
 cbonsai
 chromium
