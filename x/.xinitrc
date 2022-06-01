@@ -77,6 +77,7 @@ done &
 touchpad_ctl
 unclutter &
 ~/.fehbg &
+picom &
 # exec i3
 exec dwm
 # exec awesome
