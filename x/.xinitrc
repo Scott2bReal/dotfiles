@@ -52,8 +52,27 @@ fi
 
 upds() {
   upds=$(checkupdates | wc -l)
-  echo " $upds/"
-  sleep 30m
+  echo " $upds"
+}
+
+battery() {
+  # while true; do
+
+    # lvl=$(acpi -b)
+    # percent=$("grep -o /[0-9]+\%/ $lvl") #some regex
+    percent=$("acpi -b | awk '{print $4}' | rev | cut -c 2- | rev")
+    echo "  $percent"
+    sleep 1m
+  # done
+
+}
+
+dte() {
+  # while true; do
+    now=$(date +'%a, %B %d at %H:%M')
+    echo "$now"
+    sleep 1s
+  # done
 }
 
 # DWM display available updates
@@ -66,10 +85,10 @@ upds() {
 
 # DWM display time/date
 while true; do
-  # xsetroot -name ("$date -s +'%a, %B %d at %H:%M:%S'")
-  xsetroot -name "$(date +'%a, %B %d at %H:%M:%S')"
+  xsetroot -name "$(upds) | $(dte) |"
+  # xsetroot -name "$(date +'%a, %B %d at %H:%M:%S')"
   # xsetroot -name "$(date)"
-  sleep 1s
+  sleep 1m
 done &
 
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
