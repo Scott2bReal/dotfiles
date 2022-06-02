@@ -9,11 +9,14 @@ automake
 awesome-git
 base
 bat
+bear
 binutils
 bison
 bpytop
 cbonsai
+ccls
 chromium
+clang
 cups
 discord
 downgrade

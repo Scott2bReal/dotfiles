@@ -54,3 +54,4 @@ touchpad_ctl
 unclutter &
 ~/.fehbg &
 exec i3
+# exec dwm
