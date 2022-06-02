@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -48,47 +48,49 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# DWM Status functions
+# DWM Status functions and loops
+# For slower refresh rates, make a loop and write temp file
 
-upds() {
-  upds=$(checkupdates | wc -l)
-  echo " $upds"
-}
-
-battery() {
-  # while true; do
-
-    # lvl=$(acpi -b)
-    # percent=$("grep -o /[0-9]+\%/ $lvl") #some regex
-    percent=$("acpi -b | awk '{print $4}' | rev | cut -c 2- | rev")
-    echo "  $percent"
-    sleep 1m
-  # done
-
-}
-
-dte() {
-  # while true; do
-    now=$(date +'%a, %B %d at %H:%M')
-    echo "$now"
-    sleep 1s
-  # done
-}
-
-# DWM display available updates
-# while true; do
-#   upds=$(checkupdates | wc -l)
-#   # xsetroot -name "$(echo  "$upds"/)"
-#   xsetroot -name " $(echo $upds)"
-#   sleep 30m
-# done &
-
-# DWM display time/date
+# Battery
 while true; do
-  xsetroot -name "$(upds) | $(dte) |"
-  # xsetroot -name "$(date +'%a, %B %d at %H:%M:%S')"
-  # xsetroot -name "$(date)"
-  sleep 1m
+  lvl=$(acpi -b | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  echo "  $lvl" > /tmp/statusbar/batt.txt
+  sleep 5m
+done &
+
+# Available updates
+while true; do
+  updates=$(checkupdates | wc -l)
+  echo " $updates" > /tmp/statusbar/upds.txt
+  sleep 30m
+done &
+
+# Temperature
+while true; do
+  temp=$(acpi -t | awk 'match($0, /[0-9]+\.[0-9]/) {print substr($0, RSTART, RLENGTH)}')
+  echo " $temp °C" > /tmp/statusbar/temp.txt
+  sleep 5s
+done &
+
+# Functions for 1s refresh rates
+
+# Current time & date
+dte() {
+  now=$(date +' %a, %B %d at  %H:%M:%S')
+  echo "$now"
+}
+
+# cpu() {
+#   cpu=$()
+# }
+
+# DWM Status bar display
+while true; do
+  BATT=$(cat /tmp/statusbar/batt.txt)
+  UPDS=$(cat /tmp/statusbar/upds.txt)
+  TEMP=$(cat /tmp/statusbar/temp.txt)
+  xsetroot -name "$TEMP | $BATT | $UPDS | $(dte)"
+  sleep 1s
 done &
 
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
@@ -101,4 +103,3 @@ volumeicon &
 nm-applet &
 # exec i3
 exec dwm
-# exec awesome
