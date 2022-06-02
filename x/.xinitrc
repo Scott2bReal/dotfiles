@@ -80,16 +80,24 @@ dte() {
   echo "$now"
 }
 
-# cpu() {
-#   cpu=$()
-# }
+cpu() {
+  idle=$(top -i -b -n 1 | grep 'Cpu' | awk '{print $8}')
+  cpu=$(echo "100 - $idle" | bc)
+  echo "﬙ $cpu %"
+}
+
+mem() {
+  used=$(free | grep 'Mem' | awk '{print $3}')
+  avail=$(free | grep 'avail' | awk '{print 6}')
+  echo
+}
 
 # DWM Status bar display
 while true; do
   BATT=$(cat /tmp/statusbar/batt.txt)
   UPDS=$(cat /tmp/statusbar/upds.txt)
   TEMP=$(cat /tmp/statusbar/temp.txt)
-  xsetroot -name "$TEMP | $BATT | $UPDS | $(dte)"
+  xsetroot -name "$(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
   sleep 1s
 done &
 
