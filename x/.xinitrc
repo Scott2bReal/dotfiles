@@ -50,8 +50,22 @@ fi
 
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
 
+dte() {
+  now=$(date +'%a, %B %d at %H:%M')
+  echo "$now"
+  sleep 1s
+}
+
+while true; do
+  xsetroot -name "$(dte)"
+  sleep 1m
+done &
+
 touchpad_ctl
 unclutter &
 ~/.fehbg &
-exec i3
-# exec dwm
+# exec i3
+picom &
+volumeicon &
+nm-applet &
+exec dwm
