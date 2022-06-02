@@ -50,14 +50,26 @@ fi
 
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
 
+upds() {
+  avail=$(checkupdates | wc -l)
+  echo " $avail"
+}
+
+batt() {
+  lvl=$(acpi -b | awk 'match($0, /[0-9]+%/) {
+  print substr($0, RSTART, RLENGTH)
+  }')
+
+  echo "  $lvl"
+}
+
 dte() {
-  now=$(date +'%a, %B %d at %H:%M')
+  now=$(date +' %a, %B %d at  %H:%M')
   echo "$now"
-  sleep 1s
 }
 
 while true; do
-  xsetroot -name "$(dte)"
+  xsetroot -name "$(upds) | $(batt) | $(dte)"
   sleep 1m
 done &
 

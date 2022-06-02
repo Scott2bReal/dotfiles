@@ -127,6 +127,7 @@ xclip
 xdotool
 xorg-server
 xorg-xinit
+xorg-xsetroot
 yad
 yay
 zoom
