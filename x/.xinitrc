@@ -87,9 +87,10 @@ cpu() {
 }
 
 mem() {
-  used=$(free | grep 'Mem' | awk '{print $3}')
-  avail=$(free | grep 'avail' | awk '{print 6}')
-  echo
+  used=$(free -gh | grep 'Mem' | awk '{print $3}')
+  # avail=$(free -m | grep 'Mem' | awk '{print 6}')
+  # percent=$(echo "($used / $avail) * 100" | bc)
+  echo " $used"
 }
 
 # DWM Status bar display
@@ -97,7 +98,7 @@ while true; do
   BATT=$(cat /tmp/statusbar/batt.txt)
   UPDS=$(cat /tmp/statusbar/upds.txt)
   TEMP=$(cat /tmp/statusbar/temp.txt)
-  xsetroot -name "$(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
+  xsetroot -name "$(mem) | $(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
   sleep 1s
 done &
 
