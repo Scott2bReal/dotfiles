@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -48,36 +48,67 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-[ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
+# DWM Status functions and loops
+# For slower refresh rates, make a loop and write temp file
 
-upds() {
-  avail=$(checkupdates | wc -l)
-  echo " $avail"
-}
+# Battery
+while true; do
+  lvl=$(acpi -b | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  echo "  $lvl" > /tmp/statusbar/batt.txt
+  sleep 5m
+done &
 
-batt() {
-  lvl=$(acpi -b | awk 'match($0, /[0-9]+%/) {
-  print substr($0, RSTART, RLENGTH)
-  }')
+# Available updates
+while true; do
+  updates=$(checkupdates | wc -l)
+  echo " $updates" > /tmp/statusbar/upds.txt
+  sleep 30m
+done &
 
-  echo "  $lvl"
-}
+# Temperature
+while true; do
+  temp=$(acpi -t | awk 'match($0, /[0-9]+\.[0-9]/) {print substr($0, RSTART, RLENGTH)}')
+  echo " $temp °C" > /tmp/statusbar/temp.txt
+  sleep 5s
+done &
 
+# Functions for 1s refresh rates
+
+# Current time & date
 dte() {
-  now=$(date +' %a, %B %d at  %H:%M')
+  now=$(date +' %a, %B %d at  %H:%M:%S')
   echo "$now"
 }
 
+cpu() {
+  idle=$(top -i -b -n 1 | grep 'Cpu' | awk '{print $8}')
+  cpu=$(echo "100 - $idle" | bc)
+  echo "﬙ $cpu %"
+}
+
+mem() {
+  used=$(free -gh | grep 'Mem' | awk '{print $3}')
+  # avail=$(free -m | grep 'Mem' | awk '{print 6}')
+  # percent=$(echo "($used / $avail) * 100" | bc)
+  echo " $used"
+}
+
+# DWM Status bar display
 while true; do
-  xsetroot -name "$(upds) | $(batt) | $(dte)"
-  sleep 1m
+  BATT=$(cat /tmp/statusbar/batt.txt)
+  UPDS=$(cat /tmp/statusbar/upds.txt)
+  TEMP=$(cat /tmp/statusbar/temp.txt)
+  xsetroot -name "$(mem) | $(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
+  sleep 1s
 done &
+
+[ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
 
 touchpad_ctl
 unclutter &
 ~/.fehbg &
-# exec i3
 picom &
 volumeicon &
 nm-applet &
+# exec i3
 exec dwm
