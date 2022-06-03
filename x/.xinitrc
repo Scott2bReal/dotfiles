@@ -55,8 +55,9 @@ mkdir /tmp/statusbar
 
 # Battery
 while true; do
-  lvl=$(acpi -b | grep '0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  echo "  $lvl" > /tmp/statusbar/batt.txt
+  lvl0=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  lvl1=$(acpi -b | grep 'Battery 1' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
   sleep 5m
 done &
 
@@ -85,14 +86,14 @@ dte() {
 cpu() {
   idle=$(top -i -b -n 1 | grep 'Cpu' | awk '{print $8}')
   cpu=$(echo "100 - $idle" | bc)
-  echo "﬙ $cpu %"
+  echo " $cpu %"
 }
 
 mem() {
   used=$(free -gh | grep 'Mem' | awk '{print $3}')
   # avail=$(free -m | grep 'Mem' | awk '{print 6}')
   # percent=$(echo "($used / $avail) * 100" | bc)
-  echo " $used"
+  echo " $used"
 }
 
 # DWM Status bar display
