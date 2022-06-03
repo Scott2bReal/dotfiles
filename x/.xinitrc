@@ -51,9 +51,11 @@ fi
 # DWM Status functions and loops
 # For slower refresh rates, make a loop and write temp file
 
+mkdir /tmp/statusbar
+
 # Battery
 while true; do
-  lvl=$(acpi -b | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  lvl=$(acpi -b | grep '0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
   echo "  $lvl" > /tmp/statusbar/batt.txt
   sleep 5m
 done &
