@@ -51,7 +51,9 @@ fi
 # DWM Status functions and loops
 # For slower refresh rates, make a loop and write temp file
 
-mkdir /tmp/statusbar
+if ! [ -d /tmp/statusbar ]; then
+  mkdir /tmp/statusbar
+fi
 
 # Battery
 while true; do
@@ -61,11 +63,12 @@ while true; do
   lvl0=$(echo "$batt0" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
   lvl1=$(echo "$batt1" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
 
-  left0=$(echo "$batt0" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
-  left1=$(echo "$batt1" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
+  # left0=$(echo "$batt0" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
+  # left1=$(echo "$batt1" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
   # left1=$(echo "$batt1" | awk '{print $5}')
 
-  echo "  $lvl0 ($left0) / $lvl1 ($left1)" > /tmp/statusbar/batt.txt
+  echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
+  # echo "  $lvl0 ($left0) / $lvl1 ($left1)" > /tmp/statusbar/batt.txt
   # lvl=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
   # echo "  $lvl" > /tmp/statusbar/batt.txt
   sleep 1m
@@ -89,7 +92,8 @@ done &
 
 # Current time & date
 dte() {
-  now=$(date +' %a, %B %d at  %H:%M:%S')
+  # now=$(date +' %a, %B %d at  %H:%M:%S')
+  now=$(date +'%a, %B %d at %H:%M:%S')
   echo "$now"
 }
 
@@ -117,11 +121,10 @@ done &
 
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
 
-touchpad_ctl
 unclutter &
 ~/.fehbg &
-picom &
 volumeicon &
 nm-applet &
+picom &
 # exec i3
 exec dwm
