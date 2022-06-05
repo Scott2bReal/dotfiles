@@ -55,11 +55,11 @@ mkdir /tmp/statusbar
 
 # Battery
 while true; do
-  # lvl0=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  # lvl1=$(acpi -b | grep 'Battery 1' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  # echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
-  lvl=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  echo "  $lvl" > /tmp/statusbar/batt.txt
+  lvl0=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  lvl1=$(acpi -b | grep 'Battery 1' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
+  # lvl=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  # echo "  $lvl" > /tmp/statusbar/batt.txt
   sleep 1m
 done &
 
