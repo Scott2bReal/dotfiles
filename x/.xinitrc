@@ -75,7 +75,7 @@ done &
 while true; do
   updates=$(checkupdates | wc -l)
   echo " $updates" > /tmp/statusbar/upds.txt
-  sleep 30m
+  sleep 10m
 done &
 
 # Temperature
