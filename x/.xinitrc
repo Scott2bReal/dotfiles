@@ -55,9 +55,17 @@ mkdir /tmp/statusbar
 
 # Battery
 while true; do
-  lvl0=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  lvl1=$(acpi -b | grep 'Battery 1' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
+  batt0=$(acpi -b | grep 'Battery 0')
+  batt1=$(acpi -b | grep 'Battery 1')
+  
+  lvl0=$(echo "$batt0" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  lvl1=$(echo "$batt1" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+
+  left0=$(echo "$batt0" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
+  left1=$(echo "$batt1" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
+  # left1=$(echo "$batt1" | awk '{print $5}')
+
+  echo "  $lvl0 ($left0) / $lvl1 ($left1)" > /tmp/statusbar/batt.txt
   # lvl=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
   # echo "  $lvl" > /tmp/statusbar/batt.txt
   sleep 1m
