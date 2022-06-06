@@ -66,7 +66,8 @@ while true; do
   # left0=$(echo "$batt0" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
   # left1=$(echo "$batt1" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
 
-  echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
+  # echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
+  echo "$lvl0   $lvl1" > /tmp/statusbar/batt.txt
   sleep 1m
 done &
 
@@ -109,7 +110,8 @@ while true; do
   BATT=$(cat /tmp/statusbar/batt.txt)
   UPDS=$(cat /tmp/statusbar/upds.txt)
   TEMP=$(cat /tmp/statusbar/temp.txt)
-  xsetroot -name "$(mem) | $(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
+  # xsetroot -name "$(mem) | $(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
+  xsetroot -name "$(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $(dte)"
   sleep 1s
 done &
 
