@@ -78,7 +78,8 @@ done &
 
 # Current time & date
 dte() {
-  now=$(date +' %a, %B %d at  %H:%M:%S')
+  # now=$(date +' %a, %B %d at  %H:%M:%S')
+  now=$(date +'%a, %B %d at %H:%M:%S')
   echo "$now"
 }
 
@@ -100,7 +101,7 @@ while true; do
   BATT=$(cat /tmp/statusbar/batt.txt)
   UPDS=$(cat /tmp/statusbar/upds.txt)
   TEMP=$(cat /tmp/statusbar/temp.txt)
-  xsetroot -name "$(mem) | $(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
+  xsetroot -name "$(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $(dte)"
   sleep 1s
 done &
 
