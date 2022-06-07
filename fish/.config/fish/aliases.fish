@@ -17,3 +17,4 @@ alias pscpu 'ps auxf | sort -nr -k 3 | head -5'
 alias psmem 'ps auxf | sort -nr -k 4 | head -5'
 
 alias youtube 'firefox --new-window https://youtube.com'
+alias weather 'curl wttr.in'
