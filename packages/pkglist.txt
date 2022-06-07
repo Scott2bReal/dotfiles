@@ -4,6 +4,7 @@ alsa-utils
 autoconf
 automake
 base
+bear
 bison
 btop
 cups
@@ -59,6 +60,7 @@ pulseaudio
 pulseaudio-alsa
 ranger
 reflector
+ripgrep
 shellcheck
 slack-desktop
 smartmontools
@@ -79,6 +81,7 @@ wget
 which
 wireless_tools
 wpa_supplicant
+xclip
 xdg-user-dirs
 xdg-utils
 xf86-video-intel
