@@ -1,2 +1,3 @@
 #!/bin/sh
-feh --no-fehbg --bg-center '/home/scott/dotfiles/fehbg/minimal_cat_left.png'
+# feh --no-fehbg --bg-center '/home/scott/dotfiles/fehbg/minimal_cat_left.png'
+feh --no-fehbg --bg-fill '/home/scott/dotfiles/fehbg/champloo.png'

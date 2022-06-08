@@ -22,6 +22,7 @@ flex
 font-manager
 fzf
 gcc
+gimp
 git
 grub
 gruvbox-material-gtk-theme-git
