@@ -62,6 +62,7 @@ pulseaudio-alsa
 ranger
 reflector
 ripgrep
+scrot
 shellcheck
 slack-desktop
 smartmontools
