@@ -74,6 +74,14 @@ while true; do
   sleep 5s
 done &
 
+# Weather
+while true; do
+  sleep 10s
+  wttr=$(curl wttr.in/?format="%t" | tr -d +)
+  echo -e "$wttr" > /tmp/statusbar/wttr.txt
+  sleep 10m
+done &
+
 # Functions for 1s refresh rates
 
 # Current time & date
@@ -101,7 +109,8 @@ while true; do
   BATT=$(cat /tmp/statusbar/batt.txt)
   UPDS=$(cat /tmp/statusbar/upds.txt)
   TEMP=$(cat /tmp/statusbar/temp.txt)
-  xsetroot -name "$(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $(dte)"
+  WTTR=$(cat /tmp/statusbar/wttr.txt)
+  xsetroot -name "$(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $WTTR on $(dte)"
   sleep 1s
 done &
 
