@@ -12,6 +12,7 @@ dialog
 discord
 dosfstools
 efibootmgr
+etc-update
 ethtool
 exa
 fakeroot
@@ -62,6 +63,7 @@ pulseaudio-alsa
 ranger
 reflector
 ripgrep
+rsync
 scrot
 shellcheck
 slack-desktop
@@ -78,6 +80,7 @@ tlp-rdw
 tmux
 unclutter
 unzip
+vim
 volumeicon
 wget
 which
