@@ -79,6 +79,7 @@ texinfo
 tlp
 tlp-rdw
 tmux
+ueberzug
 unclutter
 unzip
 vim
