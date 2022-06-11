@@ -19,6 +19,7 @@ fakeroot
 feh
 firefox
 fish
+flake8
 flex
 font-manager
 fzf
