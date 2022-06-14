@@ -5,3 +5,7 @@ zsh/.config/zsh/plugins
 ranger/.config/ranger/colorschemes/__pycache__
 zsh/.config/zsh/.zcompdump
 ncspot/.config/ncspot
+mpd/.config/mpd/log
+mpd/.config/mpd/pid
+mpd/.config/mpd/database
+mpd/.config/mpd/sticker.sql
