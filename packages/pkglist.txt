@@ -44,8 +44,10 @@ m4
 make
 man-db
 man-pages
+mpd
 mtools
 ncdu
+ncmpcpp
 neofetch
 neovim
 network-manager-applet
@@ -55,6 +57,7 @@ npm
 os-prober
 pacman-contrib
 patch
+pfetch
 picom
 pipes.sh
 pkgconf
