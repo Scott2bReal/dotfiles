@@ -9,3 +9,5 @@ mpd/.config/mpd/log
 mpd/.config/mpd/pid
 mpd/.config/mpd/database
 mpd/.config/mpd/sticker.sql
+mpd/.config/mpd/playlists/samurai_champloo.m3u
+mpd/.config/mpd/playlists
