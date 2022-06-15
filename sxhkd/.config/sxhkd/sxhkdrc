@@ -14,12 +14,25 @@ alt + Escape
 
 # FA Ops Signature
 alt + shift + s
-  xdotool key C h e e r s comma enter S c o t t enter enter F i r s t space A s c e n t space O p e r a t i o n s space T e a m
+  sleep .25; xdotool key C h e e r s comma enter S c o t t enter enter F i r s t space A s c e n t space O p e r a t i o n s space T e a m
 
 # Vacc code
 super + q
-  xdotool key numbersign numbersign V A C numbersign numbersign
+  sleep .25; xdotool key numbersign numbersign V A C numbersign numbersign
 
 # Questions
 alt + shift + q
-  xdotool key P l e a s e space l e t space m e space k n o w space i f space y o u space h a v e space a n y space q u e s t i o n s exclam
+  sleep .25; xdotool key P l e a s e space l e t space m e space k n o w space i f space y o u space h a v e space a n y space q u e s t i o n s exclam
+
+# MPD controls
+
+# Toggle mpd play
+alt + shift + p 
+  mpc -q toggle 
+
+# Next and back
+alt + shift + greater
+  mpc -q next 
+
+alt + shift + less
+  mpc -q prev
