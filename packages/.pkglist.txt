@@ -85,6 +85,7 @@ mpd
 mupdf
 musescore
 ncdu
+ncmpcpp
 neofetch
 neovim
 nerd-fonts-fira-code
