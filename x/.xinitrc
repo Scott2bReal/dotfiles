@@ -129,6 +129,7 @@ unclutter &
 ~/.fehbg &
 volumeicon &
 nm-applet &
+sxhkd &
 picom &
 # exec i3
 exec dwm

@@ -32,6 +32,7 @@ gruvbox-material-icon-theme-git
 gtk-engine-murrine
 htop
 intel-ucode
+kitty
 lazygit
 libtool
 linux
@@ -44,6 +45,7 @@ m4
 make
 man-db
 man-pages
+mpc
 mpd
 mtools
 ncdu
@@ -94,6 +96,7 @@ wpa_supplicant
 xclip
 xdg-user-dirs
 xdg-utils
+xdotool
 xf86-video-intel
 xf86-video-vesa
 xorg-bdftopcf
