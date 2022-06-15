@@ -94,7 +94,7 @@ dte() {
 cpu() {
   idle=$(top -i -b -n 1 | grep 'Cpu' | awk '{print $8}')
   cpu=$(echo "100 - $idle" | bc)
-  echo " $cpu %"
+  echo " $cpu %"
 }
 
 mem() {

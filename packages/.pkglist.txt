@@ -110,6 +110,7 @@ pacman-contrib
 parted
 pass
 patch
+pfetch
 picom
 pkgconf
 playerctl
