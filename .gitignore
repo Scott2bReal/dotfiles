@@ -7,3 +7,7 @@ ncspot/.config/ncspot/userstate.cbor
 awesome/.config/awesome/themes/default/background.png
 awesome/.config/awesome/themes/default/background_white.png
 awesome/.config/awesome/themes/default/submenu.png
+mpd/.config/mpd/database
+mpd/.config/mpd/log
+mpd/.config/mpd/state
+mpd/.config/mpd/sticker.sql

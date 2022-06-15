@@ -120,6 +120,7 @@ touchpad_ctl
 unclutter &
 ~/.fehbg &
 picom &
+sxhkd &
 volumeicon &
 nm-applet &
 # exec i3
