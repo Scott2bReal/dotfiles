@@ -24,6 +24,15 @@ super + q
 alt + shift + q
   sleep .25; xdotool key P l e a s e space l e t space m e space k n o w space i f space y o u space h a v e space a n y space q u e s t i o n s exclam
 
-# Toggle mpd
-super + shift + p 
-  mpc toggle 
+# MPD controls
+
+# Toggle mpd play
+alt + shift + p 
+  mpc -q toggle 
+
+# Next and back
+alt + shift + greater
+  mpc -q next 
+
+alt + shift + less
+  mpc -q prev
