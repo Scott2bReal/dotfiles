@@ -64,6 +64,7 @@ intel-ucode
 iw
 iwd
 jq
+kitty
 lazygit
 less
 libtool
