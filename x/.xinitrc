@@ -53,6 +53,9 @@ fi
 
 mkdir /tmp/statusbar
 
+# One character separator
+SEP="∙"
+
 # Battery
 while true; do
   lvl=$(acpi -b | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
@@ -109,18 +112,18 @@ mpd() {
 
   if [ "$status" = "[playing]" ];then
     song="$(mpc current)"
-    echo "  $song"
+    echo "  $song $SEP"
   fi
 }
 
 # DWM Status bar display
 while true; do
   # BATT=$(cat /tmp/statusbar/batt.txt)
-  UPDS=$(read -r /tmp/statusbar/upds.txt)
+  UPDS=$(cat /tmp/statusbar/upds.txt)
   # TEMP=$(cat /tmp/statusbar/temp.txt)
-  WTTR=$(read -r /tmp/statusbar/wttr.txt)
+  WTTR=$(cat /tmp/statusbar/wttr.txt)
   # xsetroot -name "$(mpd) / $(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $WTTR on $(dte)"
-  xsetroot -name "$(mpd) / $UPDS / $WTTR On $(dte)"
+  xsetroot -name "$(mpd) $UPDS $SEP $WTTR on $(dte)"
   sleep 1s
 done &
 
