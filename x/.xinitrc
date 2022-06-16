@@ -87,13 +87,6 @@ done &
 
 # Functions for 1s refresh rates
 
-# Current time & date
-dte() {
-  # now=$(date +' %a, %B %d at  %H:%M:%S')
-  now=$(date +'%a, %B %d at %H:%M:%S')
-  echo "$now"
-}
-
 cpu() {
   idle=$(top -i -b -n 1 | grep 'Cpu' | awk '{print $8}')
   cpu=$(echo "100 - $idle" | bc)
@@ -114,6 +107,14 @@ mpd() {
     song="$(mpc current)"
     echo "  $song $SEP"
   fi
+}
+
+# Current time & date
+dte() {
+  # now=$(date +' %a, %B %d at  %H:%M:%S')
+  # now=$(date +'%a, %B %d at %H:%M:%S')
+  now=$(date +' %m/%d  %H:%M:%S')
+  echo "$now"
 }
 
 # DWM Status bar display
