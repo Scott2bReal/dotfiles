@@ -104,13 +104,23 @@ mem() {
   echo " $used"
 }
 
+mpd() {
+  status=$(mpc | awk '/\[playing\]/{print $1}')
+
+  if [ "$status" = "[playing]" ];then
+    song="$(mpc current)"
+    echo "  $song"
+  fi
+}
+
 # DWM Status bar display
 while true; do
-  BATT=$(cat /tmp/statusbar/batt.txt)
-  UPDS=$(cat /tmp/statusbar/upds.txt)
-  TEMP=$(cat /tmp/statusbar/temp.txt)
-  WTTR=$(cat /tmp/statusbar/wttr.txt)
-  xsetroot -name "$(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $WTTR on $(dte)"
+  # BATT=$(cat /tmp/statusbar/batt.txt)
+  UPDS=$(read -r /tmp/statusbar/upds.txt)
+  # TEMP=$(cat /tmp/statusbar/temp.txt)
+  WTTR=$(read -r /tmp/statusbar/wttr.txt)
+  # xsetroot -name "$(mpd) / $(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $WTTR on $(dte)"
+  xsetroot -name "$(mpd) / $UPDS / $WTTR On $(dte)"
   sleep 1s
 done &
 
