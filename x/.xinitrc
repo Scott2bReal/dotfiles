@@ -55,6 +55,9 @@ if ! [ -d /tmp/statusbar ]; then
   mkdir /tmp/statusbar
 fi
 
+# One character separator
+SEP="•"
+
 # Battery
 while true; do
   batt0=$(acpi -b | grep 'Battery 0')
@@ -94,13 +97,6 @@ done &
 
 # Functions for 1s refresh rates
 
-# Current time & date
-dte() {
-  # now=$(date +' %a, %B %d at  %H:%M:%S')
-  now=$(date +'%a, %B %d at %H:%M:%S')
-  echo "$now"
-}
-
 cpu() {
   idle=$(top -i -b -n 1 | grep 'Cpu' | awk '{print $8}')
   cpu=$(echo "100 - $idle" | bc)
@@ -112,14 +108,31 @@ mem() {
   echo " $used"
 }
 
+mpd() {
+  status=$(mpc | awk '/\[playing\]/{print $1}')
+
+  if [ "$status" = "[playing]" ]; then
+    song=$(mpc current) 
+    echo " $song $SEP"
+  fi
+}
+
+# Current time & date
+dte() {
+  # now=$(date +' %a, %B %d at  %H:%M:%S')
+  # now=$(date +'%a, %B %d at %H:%M:%S')
+  now=$(date +' %d %b  %H:%M:%S')
+  echo "$now"
+}
+
 # DWM Status bar display
 while true; do
   BATT=$(cat /tmp/statusbar/batt.txt)
   UPDS=$(cat /tmp/statusbar/upds.txt)
-  TEMP=$(cat /tmp/statusbar/temp.txt)
+  # TEMP=$(cat /tmp/statusbar/temp.txt)
   WTTR=$(cat /tmp/statusbar/wttr.txt)
   # xsetroot -name "$(mem) | $(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
-  xsetroot -name "$(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $WTTR on $(dte)"
+  xsetroot -name "$(mpd) $BATT $SEP $UPDS $SEP $WTTR on $(dte)"
   sleep 1s
 done &
 
