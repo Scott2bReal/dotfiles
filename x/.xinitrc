@@ -66,7 +66,11 @@ done &
 # Available updates
 while true; do
   updates=$(checkupdates | wc -l)
-  echo " $updates" > /tmp/statusbar/upds.txt
+  if [ "$updates" -gt 0 ]; then
+    echo " $updates $sep " > /tmp/statusbar/upds.txt
+  else
+    rm /tmp/statusbar/upds.txt
+  fi
   sleep 10m
 done &
 
@@ -105,7 +109,7 @@ mpd() {
 
   if [ "$status" = "[playing]" ];then
     song="$(mpc current)"
-    echo "  $song $sep"
+    echo "  $song $sep "
   fi
 }
 
@@ -126,7 +130,7 @@ while true; do
   # TEMP=$(cat /tmp/statusbar/temp.txt)
   wttr=$(cat /tmp/statusbar/wttr.txt)
   # xsetroot -name "$(mpd) / $(mem) / $(cpu) / $TEMP / $BATT / $upds / $wttr on $(dte)"
-  xsetroot -name "$(mpd) $upds $sep $wttr $sep $(dte)" 
+  xsetroot -name "$(mpd)$upds$wttr $sep $(dte)" 
   sleep 1s
 done &
 

@@ -21,7 +21,6 @@ btop
 calc
 cbonsai
 chromium
-cmake
 code
 dhclient
 dhcpcd
@@ -49,6 +48,7 @@ gcc
 gimp
 git
 gnu-netcat
+go
 gptfdisk
 grub
 gruvbox-material-gtk-theme-git
@@ -98,7 +98,6 @@ network-manager-applet
 networkmanager
 networkmanager-dmenu-git
 nfs-utils
-ninja
 nmap
 nodejs
 noto-fonts-emoji
@@ -128,7 +127,6 @@ quick-lint-js
 ranger
 redshift
 reflector
-rhash
 rmlint
 rofi
 rsync
