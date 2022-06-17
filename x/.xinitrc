@@ -56,7 +56,7 @@ if ! [ -d /tmp/statusbar ]; then
 fi
 
 # One character separator
-SEP="•"
+sep="•"
 
 # Battery
 while true; do
@@ -113,7 +113,7 @@ mpd() {
 
   if [ "$status" = "[playing]" ]; then
     song=$(mpc current) 
-    echo " $song $SEP"
+    echo " $song $sep"
   fi
 }
 
@@ -127,12 +127,12 @@ dte() {
 
 # DWM Status bar display
 while true; do
-  BATT=$(cat /tmp/statusbar/batt.txt)
-  UPDS=$(cat /tmp/statusbar/upds.txt)
+  batt=$(cat /tmp/statusbar/batt.txt)
+  upds=$(cat /tmp/statusbar/upds.txt)
   # TEMP=$(cat /tmp/statusbar/temp.txt)
-  WTTR=$(cat /tmp/statusbar/wttr.txt)
-  # xsetroot -name "$(mem) | $(cpu) | $TEMP | $BATT | $UPDS | $(dte)"
-  xsetroot -name "$(mpd) $BATT $SEP $UPDS $SEP $WTTR on $(dte)"
+  wttr=$(cat /tmp/statusbar/wttr.txt)
+  # xsetroot -name "$(mem) | $(cpu) | $TEMP | $batt | $upds | $(dte)"
+  xsetroot -name "$(mpd) $batt $sep $upds $sep $wttr on $(dte)"
   sleep 1s
 done &
 
