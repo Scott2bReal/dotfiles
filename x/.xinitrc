@@ -54,7 +54,7 @@ fi
 mkdir /tmp/statusbar
 
 # One character separator
-SEP="∙"
+sep="∙"
 
 # Battery
 while true; do
@@ -105,7 +105,7 @@ mpd() {
 
   if [ "$status" = "[playing]" ];then
     song="$(mpc current)"
-    echo "  $song $SEP"
+    echo "  $song $sep"
   fi
 }
 
@@ -113,7 +113,8 @@ mpd() {
 dte() {
   # now=$(date +' %a, %B %d at  %H:%M:%S')
   # now=$(date +'%a, %B %d at %H:%M:%S')
-  now=$(date +' %d %b  %H:%M:%S')
+  # now=$(date +" %H:%M $sep %m/%d  ")
+  now=$(date +" %m/%d $sep %H:%M  ")
 
   echo "$now"
 }
@@ -121,11 +122,11 @@ dte() {
 # DWM Status bar display
 while true; do
   # BATT=$(cat /tmp/statusbar/batt.txt)
-  UPDS=$(cat /tmp/statusbar/upds.txt)
+  upds=$(cat /tmp/statusbar/upds.txt)
   # TEMP=$(cat /tmp/statusbar/temp.txt)
-  WTTR=$(cat /tmp/statusbar/wttr.txt)
-  # xsetroot -name "$(mpd) / $(mem) / $(cpu) / $TEMP / $BATT / $UPDS / $WTTR on $(dte)"
-  xsetroot -name "$(mpd) $UPDS $SEP $WTTR on $(dte)"
+  wttr=$(cat /tmp/statusbar/wttr.txt)
+  # xsetroot -name "$(mpd) / $(mem) / $(cpu) / $TEMP / $BATT / $upds / $wttr on $(dte)"
+  xsetroot -name "$(mpd) $upds $sep $wttr $sep $(dte)" 
   sleep 1s
 done &
 

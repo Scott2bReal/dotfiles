@@ -19,3 +19,5 @@ alias psmem 'ps auxf | sort -nr -k 4 | head -5'
 
 alias youtube 'firefox --new-window https://youtube.com'
 alias weather 'curl wttr.in'
+
+alias xev "xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\n\", \$5, \$8 }'"
