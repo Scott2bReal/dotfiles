@@ -85,7 +85,7 @@ done &
 while true; do
   updates=$(checkupdates | wc -l)
   if [ "$updates" -gt 0 ]; then
-    echo " $updates $SEP" > /tmp/statusbar/upds.txt
+    echo " $updates $SEP " > /tmp/statusbar/upds.txt
   else
     rm /tmp/statusbar/upds.txt
   fi
