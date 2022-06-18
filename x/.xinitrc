@@ -125,7 +125,7 @@ mpd() {
 dte() {
   # now=$(date +' %a, %B %d at  %H:%M:%S')
   # now=$(date +'%a, %B %d at %H:%M:%S')
-  now=$(date +" %d %b $SEP %H:%M:%S  ")
+  now=$(date +" %m/%d $SEP %H:%M  ")
   echo "$now"
 }
 
