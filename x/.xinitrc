@@ -136,6 +136,9 @@ done &
 
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
 
+# Set kbdrate to lower delay
+xset r rate 225 30
+
 touchpad_ctl
 unclutter &
 ~/.fehbg &
