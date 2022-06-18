@@ -135,11 +135,14 @@ while true; do
   upds=$(cat /tmp/statusbar/upds.txt)
   # TEMP=$(cat /tmp/statusbar/temp.txt)
   wttr=$(cat /tmp/statusbar/wttr.txt)
-  xsetroot -name "$(mpd)$upds $batt $SEP $wttr $SEP $(dte)"
+  xsetroot -name "$(mpd)$upds$batt $SEP $wttr $SEP $(dte)"
   sleep 1s
 done &
 
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
+
+# Set kbdrate to lower delay
+xset r rate 225 30
 
 unclutter &
 ~/.fehbg &
