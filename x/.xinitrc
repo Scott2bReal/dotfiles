@@ -117,7 +117,7 @@ mpd() {
 
   if [ "$status" = "[playing]" ]; then
     song=$(mpc current) 
-    echo " $song $SEP"
+    echo " $song $SEP "
   fi
 }
 
