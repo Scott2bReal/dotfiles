@@ -30,6 +30,7 @@ grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
 gtk-engine-murrine
+heroku-cli
 htop
 intel-ucode
 kitty
