@@ -62,7 +62,7 @@ SEP="•"
 while true; do
   batt0=$(acpi -b | grep 'Battery 0')
   batt1=$(acpi -b | grep 'Battery 1')
-  
+
   lvl0=$(echo "$batt0" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
   lvl1=$(echo "$batt1" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
 
@@ -116,7 +116,7 @@ mpd() {
   status=$(mpc | awk '/\[playing\]/{print $1}')
 
   if [ "$status" = "[playing]" ]; then
-    song=$(mpc current) 
+    song=$(mpc current)
     echo " $song $SEP "
   fi
 }
@@ -142,7 +142,7 @@ done &
 [ -f /home/scott/.xprofile ] && . /home/scott/.xprofile
 
 # Set kbdrate to lower delay
-xset r rate 225 30
+xset r rate 225 25
 
 unclutter &
 ~/.fehbg &
