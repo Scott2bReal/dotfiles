@@ -16,6 +16,7 @@ etc-update
 ethtool
 exa
 fakeroot
+fd
 feh
 firefox
 fish
