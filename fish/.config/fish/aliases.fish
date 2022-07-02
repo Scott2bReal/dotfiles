@@ -4,6 +4,7 @@ alias ls '/usr/bin/exa --icons --git'
 alias g 'lazygit'
 alias m 'ncmpcpp'
 
+alias update 'sudo pacman -Syu'
 alias mirrors 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
 alias rgr '/usr/bin/ranger'
 alias config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
