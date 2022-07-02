@@ -48,7 +48,6 @@ gcc
 gimp
 git
 gnu-netcat
-go
 gptfdisk
 grub
 gruvbox-material-gtk-theme-git

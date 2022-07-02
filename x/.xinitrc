@@ -130,7 +130,7 @@ while true; do
   # TEMP=$(cat /tmp/statusbar/temp.txt)
   wttr=$(cat /tmp/statusbar/wttr.txt)
   # xsetroot -name "$(mpd) / $(mem) / $(cpu) / $TEMP / $BATT / $upds / $wttr on $(dte)"
-  xsetroot -name "$(mpd)$upds$wttr $sep $(dte)" 
+  xsetroot -name "$(mpd)$upds$wttr $sep $(dte)"
   sleep 1s
 done &
 
