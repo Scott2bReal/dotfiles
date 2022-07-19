@@ -27,12 +27,14 @@ fzf
 gcc
 gimp
 git
+github-cli
 grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
 gtk-engine-murrine
 heroku-cli
 htop
+icu69
 intel-ucode
 kitty
 lazygit
@@ -90,6 +92,7 @@ ueberzug
 unclutter
 unzip
 vim
+visual-studio-code-bin
 volumeicon
 wget
 which
