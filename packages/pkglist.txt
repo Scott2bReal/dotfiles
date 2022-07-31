@@ -52,6 +52,7 @@ man-pages
 mpc
 mpd
 mtools
+mupdf
 ncdu
 ncmpcpp
 neofetch
@@ -146,6 +147,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yay
+zip
 zoom
 zoxide
 zsh
