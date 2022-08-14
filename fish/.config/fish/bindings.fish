@@ -7,3 +7,6 @@
 # Search history     |  Ctrl+R     (R for reverse)   |  --history
 # Search variables   |  Ctrl+V     (V for variable)  |  --variables
 # Search processes   |  Ctrl+Alt+P (P for process)   |  --processes
+
+# Activate tmux-sessionizer
+bind \cf 'tmux-sessionizer'

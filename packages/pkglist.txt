@@ -69,6 +69,7 @@ picom
 pipes.sh
 pkgconf
 postgresql
+postman-bin
 pulseaudio
 pulseaudio-alsa
 ranger
@@ -86,6 +87,7 @@ stow
 sudo
 sxhkd
 texinfo
+tldr
 tlp
 tlp-rdw
 tmux
