@@ -9,4 +9,4 @@
 # Search processes   |  Ctrl+Alt+P (P for process)   |  --processes
 
 # Activate tmux-sessionizer
-bind \cf 'tmux-sessionizer'
+bind \cs 'tmux-sessionizer'
