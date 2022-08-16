@@ -4,6 +4,7 @@ alsa-utils
 autoconf
 automake
 base
+bat
 bear
 bison
 btop
