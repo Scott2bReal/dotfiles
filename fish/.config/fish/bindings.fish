@@ -1,3 +1,6 @@
+# Activate tmux sessionizer
+bind \cs 'tmux-sessionizer'
+
 # fzf.fish Default Keybinds
 
 # FEATURE            |  MNEMONIC KEY SEQUENCE        |  CORRESPONDING OPTION
