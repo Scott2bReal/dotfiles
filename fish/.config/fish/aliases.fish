@@ -1,5 +1,3 @@
-alias j 'z'
-alias f 'zi'
 alias ls '/usr/bin/exa --icons --git'
 alias g 'lazygit'
 alias b 'acpi -b'

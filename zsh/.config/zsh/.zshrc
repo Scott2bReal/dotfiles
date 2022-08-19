@@ -75,3 +75,4 @@ autoload edit-command-line; zle -N edit-command-line
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+eval "$(rbenv init - zsh)"
