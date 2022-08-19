@@ -2,7 +2,7 @@
 alias ls='exa --icons --git'
 alias rgr='ranger'
 alias vim='/usr/bin/nvim'
-alias vimrc='nvim ~/.config/nvim/'
+alias vimrc='cd /home/scott/.config/nvim/; vim'
 alias update='sudo pacman -Syu'
 alias cat='bat'
 
