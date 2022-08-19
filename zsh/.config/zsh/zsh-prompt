@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+# shellcheck disable=1087
 
 ## autoload vcs and colors
 autoload -Uz vcs_info
@@ -8,7 +9,7 @@ autoload -U colors && colors
 zstyle ':vcs_info:*' enable git
 
 # setup a hook that runs before every prompt.
-precmd_vcs_info() { vcs_info  }
+precmd_vcs_info() { vcs_info; }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 
@@ -28,11 +29,11 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untrackedprompt
 }
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats " %r/%S %b %m%u%c "
-zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
+zstyle ':vcs_info:git:*' formats "%r/%S %b %m%u%c "
+zstyle ':vcs_info:git:*' formats "%{$fg[white]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[blue]%} %b%{$fg[white]%})"
 
 # format our main prompt for hostname current folder, and permissions.
-PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[cyan]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%} "
+PROMPT="%B%{$fg[blue]%}%{$fg[cyan]%}%n%{$fg[white]%}@%{$fg[green]%}%m%{$fg[blue]%}%(?:%{$fg_bold[white]%} in :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%} "
 # PROMPT="%{$fg[green]%}%n@%m %~ %{$reset_color%}%#> "
 PROMPT+="\$vcs_info_msg_0_ "
 # TODO look into this for more colors

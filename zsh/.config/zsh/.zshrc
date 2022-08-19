@@ -1,5 +1,5 @@
 #!/bin/bash
-export ZDOTDIR=$HOME/.config/zsh
+# export ZDOTDIR=$HOME/.config/zsh
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
@@ -65,6 +65,12 @@ bindkey -r "^d"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
+eval "$(rbenv init - zsh)"
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 # compinit
 
 # Edit line in vim with ctrl-e:
@@ -72,7 +78,3 @@ autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
 # Environment variables set everywhere
-export EDITOR="nvim"
-export TERMINAL="alacritty"
-export BROWSER="firefox"
-eval "$(rbenv init - zsh)"
