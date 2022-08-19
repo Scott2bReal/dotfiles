@@ -43,8 +43,9 @@ zle -N down-line-or-beginning-search
 
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
-bindkey -s '^f' 'zi^M'
-bindkey -s '^s' 'ncdu^M'
+bindkey '^f' autosuggest-accept
+bindkey -s '^s' 'tmux-sessionizer^M'
+bindkey -s '^a' 'tmux attach^M'
 # bindkey -s '^n' 'nvim $(fzf)^M'
 # bindkey -s '^v' 'nvim\n'
 bindkey -s '^z' 'zi^M'
@@ -68,6 +69,8 @@ export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+export PATH="$HOME/.rbenv/bin/:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
