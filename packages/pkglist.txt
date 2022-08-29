@@ -12,6 +12,7 @@ cups
 dialog
 discord
 dosfstools
+duckstation-git
 efibootmgr
 etc-update
 ethtool
