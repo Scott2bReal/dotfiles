@@ -12,3 +12,5 @@ mpd/.config/mpd/sticker.sql
 mpd/.config/mpd/playlists/samurai_champloo.m3u
 mpd/.config/mpd/playlists
 mpd/.config/mpd/state
+duckstation/.config/duckstation/bios
+duckstation/.config/duckstation/cache
