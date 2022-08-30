@@ -51,13 +51,16 @@ fi
 # DWM Status functions and loops
 # For slower refresh rates, make a loop and write temp file
 
+# Directory gets deleted on reboot, need to remake on startup
 mkdir /tmp/statusbar
 
 # Battery
 while true; do
-  lvl0=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  lvl1=$(acpi -b | grep 'Battery 1' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
+  # lvl0=$(acpi -b | grep 'Battery 0' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  # lvl1=$(acpi -b | grep 'Battery 1' | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  # echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
+  lvl=$(acpi -b | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
+  echo "  $lvl" > /tmp/statusbar/batt.txt 
   sleep 5m
 done &
 
