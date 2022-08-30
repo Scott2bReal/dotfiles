@@ -141,6 +141,7 @@ spotify-tui
 spotifyd-full-git
 sqlitebrowser
 starship
+steam
 stow
 sudo
 sxhkd
