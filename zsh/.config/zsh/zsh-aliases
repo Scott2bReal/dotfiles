@@ -14,6 +14,7 @@ alias b='acpi -b'
 
 alias youtube='firefox --new-window https://youtube.com'
 alias weather='curl wttr.in'
+alias steam-library='sudo mount /dev/sdb2 /mnt -o uid=1000'
 
 # shellcheck disable=SC2139,SC2086
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
