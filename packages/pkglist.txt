@@ -39,7 +39,6 @@ heroku-cli
 htop
 icu69
 intel-ucode
-kitty
 lazygit
 libtool
 linux
