@@ -64,7 +64,6 @@ intel-ucode
 iw
 iwd
 jq
-kitty
 lazygit
 less
 libtool
@@ -148,12 +147,13 @@ sxhkd
 sysstat
 texinfo
 thefuck
+tldr
 tmux
 toggldesktop-git
 traceroute
 ttf-icomoon-feather
 ttf-iosevka-nerd
-ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-2048-em
 ueberzug
 unclutter
 unzip
@@ -165,6 +165,8 @@ vlc
 volumeicon
 wget
 which
+wine
+wine-mono
 wpa_supplicant
 xclip
 xdotool

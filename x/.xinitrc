@@ -139,7 +139,7 @@ done &
 # Set kbdrate to lower delay
 xset r rate 225 30
 
-touchpad_ctl
+# touchpad_ctl
 unclutter &
 ~/.fehbg &
 picom &
