@@ -56,6 +56,9 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 # For when keys break
 alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 
+# Launch School ESLint command
+alias install-eslint="npm install eslint@7.12.1 eslint-cli babel-eslint --save-dev"
+
 # For using zsh in different OS
 # case "$(uname -s)" in
 #
