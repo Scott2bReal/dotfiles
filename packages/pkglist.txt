@@ -37,6 +37,7 @@ gruvbox-material-icon-theme-git
 gtk-engine-murrine
 heroku-cli
 htop
+hyprland-git
 icu69
 intel-ucode
 lazygit
@@ -88,6 +89,7 @@ spotifyd
 starship
 stow
 sudo
+swaybg
 sxhkd
 texinfo
 tldr
@@ -100,6 +102,7 @@ unzip
 vim
 visual-studio-code-bin
 volumeicon
+waybar-hyprland-git
 wget
 which
 wireless_tools
