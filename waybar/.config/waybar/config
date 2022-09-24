@@ -1,9 +1,9 @@
 {
-    // "layer": "top", // Waybar at top layer
+    "layer": "bottom", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["sway/window"],
@@ -26,7 +26,8 @@
     //     }
     // },
     "wlr/workspaces": {
-        "format": "{icon}",
+        "format": "{name}: {icon}",
+        "format-active": "{name}: {icon}",
         "on-click": "activate",
         "format-icons": {
            "1": "",
@@ -39,7 +40,7 @@
            "8": "",
            "9": "",
            "urgent": "",
-           "active": "",
+           // "active": "",
            "default": ""
         }
       },

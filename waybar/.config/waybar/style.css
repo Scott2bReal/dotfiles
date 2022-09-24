@@ -1,3 +1,21 @@
+* {
+  font-family: FiraCode Nerd Font;
+  font-size: 13px;
+  color: #dfbf8e;
+  background-color: #282828;
+}
+
+window#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
 #workspaces button {
-  font-size: 9;
+  background-color: transparent;
+}
+
+#workspaces button.active {
+  background-color: #a9b665;
+  color: #282828;
 }
