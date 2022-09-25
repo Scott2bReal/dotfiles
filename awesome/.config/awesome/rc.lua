@@ -61,7 +61,11 @@ beautiful.init("~/.config/awesome/theme.lua")
 user = {
   terminal = "alacritty",
   browser = "firefox",
-  editor = "alacritty --class editor -e nvim"
+  editor = "alacritty --class editor -e nvim",
+  slack = "slack",
+  discord = "discord",
+  btop = "alacritty -e btop",
+  ncmpcpp = "alacritty -e ncmpcpp",
 }
 
 -- This is used later as the default terminal and editor to run.
@@ -202,7 +206,7 @@ awful.screen.connect_for_each_screen(function(s)
   -- Each screen has its own tag table.
   -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
   -- ﭮ
-  local names = { "", "", "", "", "", "", "", "", "" }
+  local names = { " ", " ", "ﭮ ", " ", " ", " ", " ", " ", " " }
   local l = awful.layout.suit
   local layouts = {
     l.spiral,
@@ -303,17 +307,17 @@ awful.screen.connect_for_each_screen(function(s)
     layout = wibox.layout.align.horizontal,
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
-      mylauncher,
+      -- mylauncher,
       s.mytaglist,
       s.mypromptbox,
     },
     s.mytasklist, -- Middle widget
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
-      mykeyboardlayout,
+      -- mykeyboardlayout,
       wibox.widget.systray(),
       mytextclock,
-      s.mylayoutbox,
+      -- s.mylayoutbox,
     },
   })
 end)
@@ -372,7 +376,27 @@ globalkeys = gears.table.join(
     awful.spawn(terminal)
   end, { description = "open a terminal", group = "launcher" }),
   awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
-  awful.key({ modkey, "Shift" }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
+  awful.key({ modkey, "Shift" }, "e", awesome.quit, { description = "quit awesome", group = "awesome" }),
+  -- Browser keybind
+  awful.key({ modkey }, "i", function()
+    awful.spawn(user.browser)
+  end, { description = "open firefox", group = "launcher" }),
+  -- Discord keybind
+  awful.key({ modkey, "Shift" }, "d", function()
+  awful.spawn(user.discord)
+  end, { description = "open Discord", group = "launcher" }),
+  -- Slack keybind
+  awful.key({ modkey, "Shift" }, "s", function()
+  awful.spawn(user.slack)
+  end, { description = "open Slack", group = "launcher" }),
+  -- Music player keybind
+  awful.key({ modkey, "Shift" }, "m", function()
+  awful.spawn(user.ncmpcpp)
+  end, { description = "open ncmpcpp", group = "launcher" }),
+  -- System monitor keybind
+  awful.key({ modkey, "Shift" }, "b", function()
+  awful.spawn(user.btop)
+  end, { description = "open btop (system monitor)", group = "launcher" }),
 
   awful.key({ modkey }, "l", function()
     awful.tag.incmwfact(0.05)
@@ -431,7 +455,7 @@ clientkeys = gears.table.join(
     c.fullscreen = not c.fullscreen
     c:raise()
   end, { description = "toggle fullscreen", group = "client" }),
-  awful.key({ modkey, "Shift" }, "c", function(c)
+  awful.key({ modkey, "Shift" }, "q", function(c)
     c:kill()
   end, { description = "close", group = "client" }),
   awful.key(

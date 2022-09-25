@@ -147,4 +147,5 @@ sxhkd &
 volumeicon &
 nm-applet &
 # exec i3
-exec dwm
+# exec dwm
+exec awesome
