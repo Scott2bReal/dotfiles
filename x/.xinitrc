@@ -98,7 +98,7 @@ cpu() {
 }
 
 mem() {
-  used=$(free -gh | grep 'Mem' | awk '{print $3}')
+  used=$(free -gh |  awk '/Mem/ {print $3}')
   # avail=$(free -m | grep 'Mem' | awk '{print 6}')
   # percent=$(echo "($used / $avail) * 100" | bc)
   echo " $used"
@@ -147,5 +147,5 @@ sxhkd &
 volumeicon &
 nm-applet &
 # exec i3
-# exec dwm
-exec awesome
+exec dwm
+# exec awesome

@@ -121,7 +121,6 @@ postman-bin
 pulseaudio-alsa
 python
 python-pip
-pywal-git
 quick-lint-js
 ranger
 redshift
@@ -147,7 +146,6 @@ sudo
 sxhkd
 sysstat
 texinfo
-thefuck
 tldr
 tmux
 toggldesktop-git
