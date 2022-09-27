@@ -34,7 +34,8 @@ local theme = {}
     --   cyan:    '#89b482'
     --   white:   '#dfbf8e'
 
-theme.font          = "Cantarell 9"
+-- theme.font          = "Cantarell 9"
+theme.font          = "Fira Code Nerd Font 8"
 
 theme.bg_normal     = "#282828"
 theme.bg_focus      = "#282828"
@@ -122,7 +123,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "~/dotfiles/fehbg/minimal_cat_left.png"
+theme.wallpaper = "~/dotfiles/fehbg/champloo.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
