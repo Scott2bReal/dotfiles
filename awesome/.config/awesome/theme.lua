@@ -35,7 +35,7 @@ local theme = {}
     --   white:   '#dfbf8e'
 
 -- theme.font          = "Cantarell 9"
-theme.font          = "Fira Code Nerd Font 8"
+theme.font          = "Fira Code Nerd Font 9"
 
 theme.bg_normal     = "#282828"
 theme.bg_focus      = "#282828"
