@@ -103,6 +103,7 @@
 # Font configuration
   font:
     size: 7.5
+    # size: 9
   # Normal (roman) font face
     normal:
       family: Fira Code Nerd Font

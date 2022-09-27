@@ -4,6 +4,7 @@ alacritty
 alsa-utils
 autoconf
 automake
+awesome
 base
 bat
 bear
