@@ -153,6 +153,7 @@ traceroute
 ttf-icomoon-feather
 ttf-iosevka-nerd
 ttf-nerd-fonts-symbols-2048-em
+typescript
 ueberzug
 unclutter
 unzip
