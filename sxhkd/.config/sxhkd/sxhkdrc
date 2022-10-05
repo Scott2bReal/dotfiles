@@ -14,7 +14,7 @@ alt + Escape
 
 # FA Ops Signature
 alt + shift + s
-  sleep .25; xdotool key C h e e r s comma enter S c o t t enter enter F i r s t space A s c e n t space O p e r a t i o n s space T e a m
+  sleep .25; xdotool key C h e e r s comma enter S c o t t
 
 # Vacc code
 super + q
@@ -29,18 +29,18 @@ alt + shift + z
   scrot
 
 # Screenshot select
-alt + shift + x 
+alt + shift + x
   scrot -s
 
 # MPD controls
 
 # Toggle mpd play
-alt + shift + p 
-  mpc -q toggle 
+alt + shift + p
+  mpc -q toggle
 
 # Next and back
 alt + shift + greater
-  mpc -q next 
+  mpc -q next
 
 alt + shift + less
   mpc -q prev
