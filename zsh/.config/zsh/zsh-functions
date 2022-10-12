@@ -29,11 +29,3 @@ function zsh_add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
-
-function nvm {
-  if [ -z ${NVM_DIR+x} ]; then
-    export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR"/
-    nvm "$@"
-  fi
-}
