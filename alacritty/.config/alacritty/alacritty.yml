@@ -172,64 +172,64 @@
 # Custom colorschemes
 
 # Colors (Gruvbox Material Dark Medium)
-  # colors:
-  #   primary:
-  #     background: '#282828'
-  #     foreground: '#dfbf8e'
-  #
-  #   normal:
-  #     black:   '#665c54'
-  #     red:     '#ea6962'
-  #     green:   '#a9b665'
-  #     yellow:  '#e78a4e'
-  #     blue:    '#7daea3'
-  #     magenta: '#d3869b'
-  #     cyan:    '#89b482'
-  #     white:   '#dfbf8e'
-  #
-  #   bright:
-  #     black:   '#928374'
-  #     red:     '#ea6962'
-  #     green:   '#a9b665'
-  #     yellow:  '#e3a84e'
-  #     blue:    '#7daea3'
-  #     magenta: '#d3869b'
-  #     cyan:    '#89b482'
-  #     white:   '#dfbf8e'
-
-        # Kanagawa Alacritty Colors
   colors:
     primary:
-      background: '0x1f1f28'
-    foreground: '0xdcd7ba'
+      background: '#282828'
+      foreground: '#dfbf8e'
 
-  normal:
-    black:   '0x090618'
-    red:     '0xc34043'
-    green:   '0x76946a'
-    yellow:  '0xc0a36e'
-    blue:    '0x7e9cd8'
-    magenta: '0x957fb8'
-    cyan:    '0x6a9589'
-    white:   '0xc8c093'
+    normal:
+      black:   '#665c54'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#e78a4e'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#dfbf8e'
 
-  bright:
-    black:   '0x727169'
-    red:     '0xe82424'
-    green:   '0x98bb6c'
-    yellow:  '0xe6c384'
-    blue:    '0x7fb4ca'
-    magenta: '0x938aa9'
-    cyan:    '0x7aa89f'
-    white:   '0xdcd7ba'
+    bright:
+      black:   '#928374'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#e3a84e'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#dfbf8e'
 
-  selection:
-    background: '0x2d4f67'
-    foreground: '0xc8c093'
-
-  indexed_colors:
-    - { index: 16, color: '0xffa066' }
-    - { index: 17, color: '0xff5d62' }
+        # Kanagawa Alacritty Colors
+  # colors:
+  #   primary:
+  #     background: '0x1f1f28'
+  #   foreground: '0xdcd7ba'
+  #
+  # normal:
+  #   black:   '0x090618'
+  #   red:     '0xc34043'
+  #   green:   '0x76946a'
+  #   yellow:  '0xc0a36e'
+  #   blue:    '0x7e9cd8'
+  #   magenta: '0x957fb8'
+  #   cyan:    '0x6a9589'
+  #   white:   '0xc8c093'
+  #
+  # bright:
+  #   black:   '0x727169'
+  #   red:     '0xe82424'
+  #   green:   '0x98bb6c'
+  #   yellow:  '0xe6c384'
+  #   blue:    '0x7fb4ca'
+  #   magenta: '0x938aa9'
+  #   cyan:    '0x7aa89f'
+  #   white:   '0xdcd7ba'
+  #
+  # selection:
+  #   background: '0x2d4f67'
+  #   foreground: '0xc8c093'
+  #
+  # indexed_colors:
+  #   - { index: 16, color: '0xffa066' }
+  #   - { index: 17, color: '0xff5d62' }
 
 # Gruvbox Material themes
   # schemes:
