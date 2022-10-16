@@ -151,5 +151,5 @@ nm-applet &
 sxhkd &
 # picom &
 # exec i3
-exec dwm
-# exec awesome
+# exec dwm
+exec awesome
