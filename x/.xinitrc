@@ -149,7 +149,7 @@ unclutter &
 volumeicon &
 nm-applet &
 sxhkd &
-picom &
+# picom &
 # exec i3
 exec dwm
 # exec awesome
