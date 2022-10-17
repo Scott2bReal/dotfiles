@@ -29,3 +29,9 @@ function zsh_add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
+
+function update_suckless_config() {
+  rm config.h
+  cp config.def.h config.h
+  sudo make install
+}
