@@ -21,7 +21,6 @@ btop
 calc
 cbonsai
 chromium
-code
 dhclient
 dhcpcd
 dhcping
@@ -161,6 +160,7 @@ usb_modeswitch
 usbutils
 vi
 vim
+visual-studio-code-bin
 vlc
 volumeicon
 wget
