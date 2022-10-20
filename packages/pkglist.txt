@@ -9,10 +9,13 @@ base
 bat
 bear
 bison
+bluez
+bluez-utils
 btop
 cups
 dialog
 discord
+docker-desktop
 dosfstools
 duckstation-git
 efibootmgr
@@ -32,6 +35,7 @@ gcc
 gimp
 git
 github-cli
+gnome-terminal
 grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
@@ -69,13 +73,14 @@ os-prober
 pacman-contrib
 pacutils
 patch
+pavucontrol
 pfetch
 picom
 pipes.sh
+pipewire-pulse
 pkgconf
 postgresql
 postman-bin
-pulseaudio
 pulseaudio-alsa
 ranger
 reflector

@@ -1,4 +1,6 @@
 /home/scott/.rbenv/shims
+/home/scott/.rbenv/shims
+/home/scott/.rbenv/bin/
 /home/scott/.cargo/bin
 /home/scott/.local/bin
 /home/scott/.rbenv/shims

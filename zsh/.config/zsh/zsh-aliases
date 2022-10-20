@@ -15,6 +15,8 @@ alias b='acpi -b'
 alias youtube='firefox --new-window https://youtube.com'
 alias weather='curl wttr.in'
 
+alias headphones='bluetoothctl connect FC:E8:06:63:49:81'
+
 # shellcheck disable=SC2139,SC2086
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias syrinscape='$HOME/syrinscape/Syrinscape\ Online\ Player/Syrinscape\ Online\ Player'
