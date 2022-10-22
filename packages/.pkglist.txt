@@ -27,6 +27,7 @@ dhcping
 dialog
 discord
 dmenu
+docker
 downgrade
 duckstation-git
 dwarffortress
@@ -89,7 +90,6 @@ ncmpcpp
 neofetch
 neovim
 nerd-fonts-fira-code
-nerd-fonts-hack
 net-tools
 nethack
 network-manager-applet
@@ -149,6 +149,7 @@ tldr
 tmux
 toggldesktop-git
 traceroute
+ttf-hack-nerd
 ttf-icomoon-feather
 ttf-iosevka-nerd
 ttf-nerd-fonts-symbols-2048-em
