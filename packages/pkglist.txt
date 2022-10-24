@@ -15,7 +15,7 @@ btop
 cups
 dialog
 discord
-docker-desktop
+docker
 dosfstools
 duckstation-git
 efibootmgr
