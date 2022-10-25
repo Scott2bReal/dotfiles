@@ -35,3 +35,7 @@ function update_suckless_config() {
   cp config.def.h config.h
   sudo make install
 }
+
+function youtube() {
+  firefox --new-window https://youtube.com
+}
