@@ -82,6 +82,7 @@ pkgconf
 postgresql
 postman-bin
 pulseaudio-alsa
+python-pip
 ranger
 reflector
 ripgrep
