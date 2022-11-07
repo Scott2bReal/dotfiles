@@ -135,7 +135,8 @@ while true; do
   upds=$(cat /tmp/statusbar/upds.txt)
   # TEMP=$(cat /tmp/statusbar/temp.txt)
   wttr=$(cat /tmp/statusbar/wttr.txt)
-  xsetroot -name "$(mpd)$upds$batt $SEP $wttr $SEP $(dte)"
+  # xsetroot -name "$(mpd)$upds$batt $SEP $wttr $SEP $(dte)"
+  xsetroot -name "$(mpd)$upds$batt $SEP $(dte)"
   sleep 1s
 done &
 
@@ -149,7 +150,7 @@ unclutter &
 volumeicon &
 nm-applet &
 sxhkd &
-picom &
+picom --experimental-backends &
 # exec i3
 exec dwm
 # exec awesome

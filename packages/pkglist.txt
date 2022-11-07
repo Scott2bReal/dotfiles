@@ -61,6 +61,7 @@ mpc
 mpd
 mtools
 mupdf
+musescore
 ncdu
 ncmpcpp
 neofetch
