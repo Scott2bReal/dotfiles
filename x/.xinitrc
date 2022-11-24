@@ -150,7 +150,7 @@ unclutter &
 volumeicon &
 nm-applet &
 sxhkd &
-picom --experimental-backends &
+picom &
 # exec i3
 exec dwm
 # exec awesome

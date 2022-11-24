@@ -40,7 +40,6 @@ grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
 gtk-engine-murrine
-heroku-cli
 htop
 hyprland-git
 icu69
@@ -110,7 +109,6 @@ unzip
 vim
 visual-studio-code-bin
 volumeicon
-waybar-hyprland-git
 wget
 which
 wireless_tools
