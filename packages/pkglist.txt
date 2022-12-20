@@ -56,6 +56,7 @@ m4
 make
 man-db
 man-pages
+mkcert
 mpc
 mpd
 mtools
@@ -67,6 +68,7 @@ neofetch
 neovim
 network-manager-applet
 networkmanager
+ngrok
 noto-fonts-emoji
 npm
 os-prober
