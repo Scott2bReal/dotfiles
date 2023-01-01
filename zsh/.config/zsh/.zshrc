@@ -69,7 +69,6 @@ bindkey -r "^d"
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
 export PATH="$HOME/.rbenv/bin/:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
