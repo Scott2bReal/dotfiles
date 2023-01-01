@@ -12,6 +12,7 @@ bison
 bluez
 bluez-utils
 btop
+chromium
 cups
 dialog
 discord
