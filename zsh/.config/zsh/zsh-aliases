@@ -11,6 +11,7 @@ alias g='lazygit'
 alias x='tmux'
 alias xs='tmux-sessionizer'
 alias b='acpi -b'
+alias n='nvm use'
 
 # alias youtube='firefox --new-window https://youtube.com'
 alias weather='curl wttr.in'
