@@ -94,6 +94,7 @@ scrot
 shellcheck
 slack-desktop
 smartmontools
+speedtest-cli
 spotify
 spotifyd
 starship

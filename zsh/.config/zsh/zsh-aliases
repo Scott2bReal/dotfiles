@@ -7,6 +7,7 @@ alias update='sudo pacman -Syu'
 alias cat='bat'
 
 alias m='ncmpcpp'
+alias c='bat'
 alias g='lazygit'
 alias x='tmux'
 alias xs='tmux-sessionizer'
