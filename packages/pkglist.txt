@@ -67,6 +67,7 @@ ncdu
 ncmpcpp
 neofetch
 neovim
+nethack
 network-manager-applet
 networkmanager
 ngrok
