@@ -41,6 +41,7 @@ grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
 gtk-engine-murrine
+handbrake
 htop
 hyprland-git
 icu69
