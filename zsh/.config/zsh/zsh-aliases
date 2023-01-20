@@ -6,6 +6,7 @@ alias vimrc='cd /home/scott/.config/nvim/; vim'
 alias update='sudo pacman -Syu'
 alias cat='bat'
 alias handbrake='ghb'
+alias dev='~/.local/firefox-dev/firefox/firefox'
 
 alias m='ncmpcpp'
 alias c='bat'
