@@ -1,5 +1,6 @@
 #!/bin/sh
 alias ls='exa --icons --git'
+alias lsa='exa -a --icons --git'
 alias rgr='ranger'
 alias vim='/usr/bin/nvim'
 alias vimrc='cd /home/scott/.config/nvim/; vim'
