@@ -80,8 +80,11 @@ eval "$(zoxide init zsh)"
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+# FNM (Node version manager) setup
+eval "$(fnm env --use-on-cd)"
+
 # NVM stuff
 
 # Environment variables set everywhere
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
