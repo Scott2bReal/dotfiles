@@ -24,7 +24,6 @@ zsh_add_file "zsh-prompt"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
-zsh_add_plugin "mafredri/zsh-async"
 # zsh_add_plugin "Aloxaf/fzf-tab"
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
@@ -74,17 +73,10 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
 # eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+# FNM (Node version manager) setup
+eval "$(fnm env --use-on-cd)"
 # compinit
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-
-# FNM (Node version manager) setup
-eval "$(fnm env --use-on-cd)"
-
-# NVM stuff
-
-# Environment variables set everywhere
-# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
