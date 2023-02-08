@@ -66,6 +66,7 @@ mupdf
 musescore
 ncdu
 ncmpcpp
+ncspot
 neofetch
 neovim
 nethack
