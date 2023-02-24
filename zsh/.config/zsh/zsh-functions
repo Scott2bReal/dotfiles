@@ -39,3 +39,8 @@ function update_suckless_config() {
 function youtube() {
   firefox --new-window https://youtube.com
 }
+
+function check-types() {
+  echo "Running npx tsc --noEmit --pretty"
+  npx tsc --noEmit --pretty
+}

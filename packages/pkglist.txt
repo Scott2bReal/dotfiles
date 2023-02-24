@@ -6,12 +6,14 @@ autoconf
 automake
 awesome
 base
+base-devel
 bat
 bear
 bison
 bluez
 bluez-utils
 btop
+chafa
 chromium
 cups
 dialog
@@ -51,6 +53,7 @@ libtool
 linux
 linux-firmware
 linux-headers
+lua
 lvm2
 lxappearance
 lxsession
