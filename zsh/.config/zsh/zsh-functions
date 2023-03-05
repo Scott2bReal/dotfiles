@@ -44,3 +44,7 @@ function check-types() {
   echo "Running npx tsc --noEmit --pretty"
   npx tsc --noEmit --pretty
 }
+
+function shuttle-restart() {
+  cargo shuttle project rm && cargo shuttle project new
+}
