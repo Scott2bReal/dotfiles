@@ -129,6 +129,14 @@ dte() {
   echo "$now"
 }
 
+# Screen Coordinates
+coords() {
+  if [ -f /tmp/statusbar/coords.txt ]; then
+    coords=$(cat /tmp/statusbar/coords.txt)
+    echo "$coords $SEP "
+  fi
+}
+
 # DWM Status bar display
 while true; do
   batt=$(cat /tmp/statusbar/batt.txt)
@@ -136,7 +144,7 @@ while true; do
   # TEMP=$(cat /tmp/statusbar/temp.txt)
   wttr=$(cat /tmp/statusbar/wttr.txt)
   # xsetroot -name "$(mpd)$upds$batt $SEP $wttr $SEP $(dte)"
-  xsetroot -name "$(mpd)$upds$batt $SEP $(dte)"
+  xsetroot -name "$(coords)$(mpd)$upds$batt $SEP $(dte)"
   sleep 1s
 done &
 
