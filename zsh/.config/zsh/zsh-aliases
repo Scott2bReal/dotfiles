@@ -8,8 +8,6 @@ alias cat='bat'
 alias handbrake='ghb'
 alias dev='~/.local/firefox-dev/firefox/firefox'
 alias update-fnm='cargo install fnm -- --skip-shell'
-alias topgrade='topgrade --disable cargo --disable gem --disable ruby_gems --disable node --disable yarn --disable rustup --disable pip3'
-alias topgrade-full='topgrade'
 
 alias m='ncmpcpp'
 alias c='bat'
