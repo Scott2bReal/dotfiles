@@ -110,9 +110,9 @@ myawesomemenu = {
       hotkeys_popup.show_help(nil, awful.screen.focused())
     end,
   },
-  { "manual", terminal .. " -e man awesome" },
+  { "manual",      terminal .. " -e man awesome" },
   { "edit config", editor_cmd .. " " .. awesome.conffile },
-  { "restart", awesome.restart },
+  { "restart",     awesome.restart },
   {
     "quit",
     function()
@@ -123,7 +123,7 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({
   items = {
-    { "awesome", myawesomemenu, beautiful.awesome_icon },
+    { "awesome",       myawesomemenu, beautiful.awesome_icon },
     { "open terminal", terminal },
   },
 })
@@ -140,7 +140,45 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+clock_widget = wibox.widget.textclock(" %m/%d • %H:%M  ")
+
+-- Create an updates widget
+updates_widget = wibox.widget.textbox()
+local function update_updates_widget()
+  awful.spawn.easy_async_with_shell(
+    "checkupdates | wc -l",
+    function(stdout)
+      updates_widget.text = string.format(" %s", stdout)
+    end
+  )
+end
+
+-- Create a battery widget
+battery_widget = wibox.widget.textbox()
+local function update_battery_widget()
+  local battery_0_cap = io.open('/sys/class/power_supply/BAT0/capacity', 'r'):read()
+  local battery_1_cap = io.open('/sys/class/power_supply/BAT1/capacity', 'r'):read()
+  local battery_0_status = io.open('/sys/class/power_supply/BAT0/status', 'r'):read()
+  local battery_1_status = io.open('/sys/class/power_supply/BAT1/status', 'r'):read()
+  local battery_icon = ' '
+  local battery_charging_icon = ''
+  if (battery_0_status == 'Charging') or (battery_1_status == 'Charging') then
+    battery_widget.text = string.format("%s %s %s", battery_0_cap, battery_charging_icon, battery_1_cap)
+  else
+    battery_widget.text = string.format("%s %s %s", battery_0_cap, battery_icon, battery_1_cap)
+  end
+end
+
+-- Update the battery widget every 60 seconds
+gears.timer {
+  timeout = 60,
+  call_now = true,
+  autostart = true,
+  callback = function()
+    update_battery_widget()
+    update_updates_widget()
+  end
+}
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -264,60 +302,72 @@ awful.screen.connect_for_each_screen(function(s)
       spacing = 10,
       spacing_widget = {
         {
-        shape = gears.shape.circle,
+          shape = gears.shape.circle,
           forced_width = 5,
-          widget = wibox.widget.separator
+          widget = wibox.widget.separator,
         },
         valign = "center",
         halign = "center",
         widget = wibox.container.place,
       },
-      layout = wibox.layout.flex.horizontal
+      layout = wibox.layout.flex.horizontal,
     },
-     widget_template = {
+    widget_template = {
+      {
         {
+          {
             {
-                {
-                    {
-                        id     = 'icon_role',
-                        widget = wibox.widget.imagebox,
-                    },
-                    margins = 2,
-                    widget  = wibox.container.margin,
-                },
-                {
-                    id     = 'text_role',
-                    widget = wibox.widget.textbox,
-                },
-                layout = wibox.layout.fixed.horizontal,
+              id = "icon_role",
+              widget = wibox.widget.imagebox,
             },
-            left  = 10,
-            right = 10,
-            widget = wibox.container.margin
+            margins = 2,
+            widget = wibox.container.margin,
+          },
+          {
+            id = "text_role",
+            widget = wibox.widget.textbox,
+          },
+          layout = wibox.layout.fixed.horizontal,
         },
-        id     = 'background_role',
-        widget = wibox.container.background,
+        left = 10,
+        right = 10,
+        widget = wibox.container.margin,
+      },
+      id = "background_role",
+      widget = wibox.container.background,
     },
   })
 
   -- Create the wibox
   s.mywibox = awful.wibar({ position = "top", screen = s })
 
+  -- Define separator
+  local separator = wibox.widget.separator({
+    orientation = "vertical",
+    forced_width = 15,
+  })
+
   -- Add widgets to the wibox
   s.mywibox:setup({
     layout = wibox.layout.align.horizontal,
-    { -- Left widgets
+    {
+      -- Left widgets
       layout = wibox.layout.fixed.horizontal,
       -- mylauncher,
       s.mytaglist,
       s.mypromptbox,
     },
     s.mytasklist, -- Middle widget
-    { -- Right widgets
+    {
+      -- Right widgets
       layout = wibox.layout.fixed.horizontal,
       -- mykeyboardlayout,
+      updates_widget,
+      separator,
+      battery_widget,
+      separator,
+      clock_widget,
       wibox.widget.systray(),
-      mytextclock,
       -- s.mylayoutbox,
     },
   })
@@ -340,7 +390,6 @@ globalkeys = gears.table.join(
   awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
   awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
   awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
-
   awful.key({ modkey }, "j", function()
     awful.client.focus.byidx(1)
   end, { description = "focus next by index", group = "client" }),
@@ -384,19 +433,19 @@ globalkeys = gears.table.join(
   end, { description = "open firefox", group = "launcher" }),
   -- Discord keybind
   awful.key({ modkey, "Shift" }, "d", function()
-  awful.spawn(user.discord)
+    awful.spawn(user.discord)
   end, { description = "open Discord", group = "launcher" }),
   -- Slack keybind
   awful.key({ modkey, "Shift" }, "s", function()
-  awful.spawn(user.slack)
+    awful.spawn(user.slack)
   end, { description = "open Slack", group = "launcher" }),
   -- Music player keybind
   awful.key({ modkey, "Shift" }, "m", function()
-  awful.spawn(user.ncmpcpp)
+    awful.spawn(user.ncmpcpp)
   end, { description = "open ncmpcpp", group = "launcher" }),
   -- System monitor keybind
   awful.key({ modkey, "Shift" }, "b", function()
-  awful.spawn(user.btop)
+    awful.spawn(user.btop)
   end, { description = "open btop (system monitor)", group = "launcher" }),
 
   awful.key({ modkey }, "l", function()
@@ -562,7 +611,7 @@ awful.rules.rules = {
   {
     rule = {},
     properties = {
-      border_width = beautiful.border_width,
+      border_width = 0,
       border_color = beautiful.border_normal,
       focus = awful.client.focus.filter,
       raise = true,
@@ -577,7 +626,7 @@ awful.rules.rules = {
   {
     rule_any = {
       instance = {
-        "DTA", -- Firefox addon DownThemAll.
+        "DTA",   -- Firefox addon DownThemAll.
         "copyq", -- Includes session name in class.
         "pinentry",
       },
@@ -586,7 +635,7 @@ awful.rules.rules = {
         "Blueman-manager",
         "Gpick",
         "Kruler",
-        "MessageWin", -- kalarm.
+        "MessageWin",  -- kalarm.
         "Sxiv",
         "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
         "Wpa_gui",
@@ -594,16 +643,15 @@ awful.rules.rules = {
         "xtightvncviewer",
         "zoom",
       },
-
       -- Note that the name property shown in xprop might be set slightly after creation of the client
       -- and the name shown there might not match defined rules here.
       name = {
         "Event Tester", -- xev.
       },
       role = {
-        "AlarmWindow", -- Thunderbird's calendar.
+        "AlarmWindow",   -- Thunderbird's calendar.
         "ConfigManager", -- Thunderbird's about:config.
-        "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
+        "pop-up",        -- e.g. Google Chrome's (detached) Developer Tools.
       },
     },
     properties = { floating = true },
@@ -613,8 +661,10 @@ awful.rules.rules = {
   { rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
 
   -- Set Firefox to always map on the tag named "2" on screen 1.
-  { rule = { class = "Firefox" },
-    properties = { screen = 1, tag = "2" } },
+  {
+    rule = { class = "Firefox" },
+    properties = { screen = 1, tag = "2" },
+  },
 }
 -- }}}
 
@@ -646,20 +696,24 @@ client.connect_signal("request::titlebars", function(c)
   )
 
   awful.titlebar(c):setup({
-    { -- Left
+    {
+      -- Left
       awful.titlebar.widget.iconwidget(c),
       buttons = buttons,
       layout = wibox.layout.fixed.horizontal,
     },
-    { -- Middle
-      { -- Title
+    {
+      -- Middle
+      {
+        -- Title
         align = "center",
         widget = awful.titlebar.widget.titlewidget(c),
       },
       buttons = buttons,
       layout = wibox.layout.flex.horizontal,
     },
-    { -- Right
+    {
+      -- Right
       awful.titlebar.widget.floatingbutton(c),
       awful.titlebar.widget.maximizedbutton(c),
       awful.titlebar.widget.stickybutton(c),
