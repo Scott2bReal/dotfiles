@@ -9,6 +9,24 @@ local dpi = xresources.apply_dpi
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 
+local colors = {
+    -- primary:
+    background = "#282828",
+    foreground = "#dfbf8e",
+
+    -- normal:
+    green = "#a9b665",
+    yellow = "#e78a4e",
+    blue = "#7daea3",
+    magenta = "#d3869b",
+    cyan = "#89b482",
+    white = "#dfbf8e",
+    black = "#282828",
+    gray = "#665c54",
+    lightGray = "#928374",
+    red = "#ea6962",
+}
+
 local theme = {}
     -- primary:
     --   background: '#282828'
@@ -37,24 +55,24 @@ local theme = {}
 -- theme.font          = "Cantarell 9"
 theme.font          = "Fira Code Nerd Font 9"
 
-theme.bg_normal     = "#282828"
-theme.bg_focus      = "#282828"
-theme.bg_urgent     = "#ea6962"
-theme.bg_minimize   = "#928374"
+theme.bg_normal     = colors.background
+theme.bg_focus      = colors.background
+theme.bg_urgent     = colors.red
+theme.bg_minimize   = colors.lightGray
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#dfbf8e"
--- theme.fg_focus      = "#7daea3"
-theme.fg_focus      = "#a9b665"
-theme.fg_urgent     = "#ea6962"
-theme.fg_minimize   = "#928374"
+theme.fg_normal     = colors.foreground
+-- theme.fg_focus      = colors.blue
+theme.fg_focus      = colors.green
+theme.fg_urgent     = colors.red
+theme.fg_minimize   = colors.lightGray
 
-theme.useless_gap   = dpi(5)
+theme.useless_gap   = dpi(4)
 theme.border_width  = dpi(3)
-theme.border_normal = "#282828"
--- theme.border_focus  = "#dfbf8e"
-theme.border_focus = "#a9b665"
-theme.border_marked = "#d3869b"
+theme.border_normal = colors.background
+-- theme.border_focus  = colors.white
+theme.border_focus = colors.green
+theme.border_marked = colors.magenta
 
 -- There are other variable sets
 -- overriding the default one when
