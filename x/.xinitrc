@@ -60,26 +60,22 @@ SEP="•"
 
 # Battery
 while true; do
-  batt0=$(acpi -b | grep 'Battery 0')
-  batt1=$(acpi -b | grep 'Battery 1')
-
-  lvl0=$(echo "$batt0" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-  lvl1=$(echo "$batt1" | awk 'match($0, /[0-9]+%/) {print substr($0, RSTART, RLENGTH)}')
-
-  # left0=$(echo "$batt0" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
-  # left1=$(echo "$batt1" | awk '{print $5}' | rev | cut -d":" -f 2,3 | rev)
-
-  # echo "  $lvl0 / $lvl1" > /tmp/statusbar/batt.txt
-  echo "$lvl0   $lvl1" > /tmp/statusbar/batt.txt
-  sleep 1m
+  lvl0=$(cat /sys/class/power_supply/BAT0/capacity)
+  lvl1=$(cat /sys/class/power_supply/BAT1/capacity)
+  if [ "$(cat /sys/class/power_supply/BAT0/status)" = "Charging" ] || [ "$(cat /sys/class/power_supply/BAT1/status)" = "Charging" ]; then
+    echo "$lvl0%  $lvl1%" > /tmp/statusbar/batt.txt
+  else
+    echo "$lvl0%   $lvl1%" > /tmp/statusbar/batt.txt
+  fi
+  sleep 5s
 done &
 
 # Weather
-while true; do
-  wttr=$(curl wttr.in/?format="%t" | tr -d \+ )
-  echo "$wttr" > /tmp/statusbar/wttr.txt
-  sleep 10m
-done &
+# while true; do
+#   wttr=$(curl wttr.in/?format="%t" | tr -d \+ )
+#   echo "$wttr" > /tmp/statusbar/wttr.txt
+#   sleep 10m
+# done &
 
 # Available updates
 while true; do
@@ -142,7 +138,7 @@ while true; do
   batt=$(cat /tmp/statusbar/batt.txt)
   upds=$(cat /tmp/statusbar/upds.txt)
   # TEMP=$(cat /tmp/statusbar/temp.txt)
-  wttr=$(cat /tmp/statusbar/wttr.txt)
+  # wttr=$(cat /tmp/statusbar/wttr.txt)
   # xsetroot -name "$(mpd)$upds$batt $SEP $wttr $SEP $(dte)"
   xsetroot -name "$(coords)$(mpd)$upds$batt $SEP $(dte)"
   sleep 1s
