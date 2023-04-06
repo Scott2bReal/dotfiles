@@ -149,11 +149,11 @@ local separator = wibox.widget.textbox(" • ")
 updates_widget = wibox.widget.textbox()
 local function update_updates_widget()
 	awful.spawn.easy_async_with_shell("checkupdates | wc -l", function(stdout)
-    if tonumber(stdout) > 0 then
-      updates_widget.text = string.format(" %s • ", string.gsub(stdout, "%s+", ""))
-    else
-      updates_widget.text = ""
-    end
+		if tonumber(stdout) > 0 then
+			updates_widget.text = string.format(" %s • ", string.gsub(stdout, "%s+", ""))
+		else
+			updates_widget.text = ""
+		end
 	end)
 end
 
