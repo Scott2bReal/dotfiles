@@ -167,9 +167,9 @@ local function update_battery_widget()
 	local battery_icon = " "
 	local battery_charging_icon = ""
 	if (battery_0_status == "Charging") or (battery_1_status == "Charging") then
-		battery_widget.text = string.format("%s %s %s", battery_0_cap, battery_charging_icon, battery_1_cap)
+		battery_widget.text = string.format(" %s %s %s", battery_0_cap, battery_charging_icon, battery_1_cap)
 	else
-		battery_widget.text = string.format("%s %s %s", battery_0_cap, battery_icon, battery_1_cap)
+		battery_widget.text = string.format(" %s %s %s", battery_0_cap, battery_icon, battery_1_cap)
 	end
 end
 

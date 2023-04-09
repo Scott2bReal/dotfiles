@@ -39,7 +39,6 @@ gimp
 git
 github-cli
 gnome-terminal
-go
 grub
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
