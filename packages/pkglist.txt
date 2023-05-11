@@ -109,11 +109,12 @@ sudo
 swaybg
 sxhkd
 texinfo
-ticktick
 tldr
 tlp
 tlp-rdw
 tmux
+ttf-firacode-nerd
+ttf-hack-nerd
 ueberzug
 unclutter
 unzip
@@ -172,7 +173,6 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-yay
 zip
 zoom
 zoxide
