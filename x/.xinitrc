@@ -149,6 +149,9 @@ done &
 # Set kbdrate to lower delay
 xset r rate 225 25
 
+# Swap caps and left control
+setxkbmap -option ctrl:swapcaps
+
 unclutter &
 ~/.fehbg &
 volumeicon &
