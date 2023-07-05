@@ -16,6 +16,7 @@ alias x='tmux'
 alias xs='tmux-sessionizer'
 alias b='acpi -b'
 alias n='fnm use'
+alias p='pnpm'
 
 # alias youtube='firefox --new-window https://youtube.com'
 alias weather='curl wttr.in'
