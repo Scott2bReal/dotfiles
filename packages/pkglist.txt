@@ -60,6 +60,7 @@ m4
 make
 man-db
 man-pages
+meson
 mkcert
 mpc
 mpd
@@ -75,6 +76,7 @@ nethack
 network-manager-applet
 networkmanager
 ngrok
+ninja
 noto-fonts-emoji
 npm
 os-prober
@@ -91,6 +93,7 @@ postgresql
 postman-bin
 pulseaudio-alsa
 python-pip
+python-tqdm
 ranger
 reflector
 ripgrep
@@ -115,6 +118,7 @@ tlp-rdw
 tmux
 ttf-firacode-nerd
 ttf-hack-nerd
+uasm
 ueberzug
 unclutter
 unzip
