@@ -24,7 +24,7 @@ duckstation-git
 efibootmgr
 etc-update
 ethtool
-exa
+eza
 fakeroot
 fd
 feh
@@ -47,6 +47,8 @@ handbrake
 htop
 icu69
 intel-ucode
+jre11-openjdk
+jre17-openjdk
 lazygit
 libtool
 linux
@@ -60,7 +62,6 @@ m4
 make
 man-db
 man-pages
-meson
 mkcert
 mpc
 mpd
@@ -76,7 +77,6 @@ nethack
 network-manager-applet
 networkmanager
 ngrok
-ninja
 noto-fonts-emoji
 npm
 os-prober
@@ -93,8 +93,8 @@ postgresql
 postman-bin
 pulseaudio-alsa
 python-pip
-python-tqdm
 ranger
+rclone
 reflector
 ripgrep
 rsync
@@ -118,7 +118,6 @@ tlp-rdw
 tmux
 ttf-firacode-nerd
 ttf-hack-nerd
-uasm
 ueberzug
 unclutter
 unzip

@@ -79,7 +79,7 @@ done &
 
 # Available updates
 while true; do
-  updates=$(checkupdates | wc -l)
+  updates=$(pacman -Qu | wc -l)
   if [ "$updates" -gt 0 ]; then
     echo " $updates $SEP " > /tmp/statusbar/upds.txt
   else
@@ -117,6 +117,14 @@ mpd() {
   fi
 }
 
+# 
+sessions() {
+  active=$(tmux list-sessions 2>/dev/null | wc -l)
+  if [ "$active" -gt 0 ]; then
+    echo "  $active $SEP "
+  fi
+}
+
 # Current time & date
 dte() {
   # now=$(date +' %a, %B %d at  %H:%M:%S')
@@ -140,7 +148,7 @@ while true; do
   # TEMP=$(cat /tmp/statusbar/temp.txt)
   # wttr=$(cat /tmp/statusbar/wttr.txt)
   # xsetroot -name "$(mpd)$upds$batt $SEP $wttr $SEP $(dte)"
-  xsetroot -name "$(coords)$(mpd)$upds$batt $SEP $(dte)"
+  xsetroot -name "$(coords)$(mpd)$(sessions)$upds$batt $SEP $(dte)"
   sleep 1s
 done &
 
