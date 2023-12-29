@@ -79,7 +79,7 @@ done &
 
 # Available updates
 while true; do
-  updates=$(pacman -Qu | wc -l)
+  updates=$(checkupdates | wc -l)
   if [ "$updates" -gt 0 ]; then
     echo " $updates $SEP " > /tmp/statusbar/upds.txt
   else
