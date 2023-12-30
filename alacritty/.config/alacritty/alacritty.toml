@@ -1,15 +1,3 @@
-dynamic_title = true
-startup_mode = "Windowed"
-unfocused_hollow = true
-
-[bold]
-family = "FiraCode Nerd Font"
-style = "Bold"
-
-[bold_italic]
-family = "FiraCode Nerd Font"
-style = "Bold Italic"
-
 [colors]
 draw_bold_text_with_bright_colors = true
 
@@ -47,14 +35,6 @@ size = 7.5
 [font.normal]
 family = "FiraCode Nerd Font"
 style = "Regular"
-
-[glyph_offset]
-x = 0
-y = 0
-
-[italic]
-family = "FiraCode Nerd Font"
-style = "Italic"
 
 [[keyboard.bindings]]
 action = "ScrollToBottom"
@@ -179,16 +159,10 @@ key = "N"
 mode = "Search"
 mods = "Control"
 
-[offset]
-x = 0
-y = 1
-
 [scrolling]
 multiplier = 5
-
-[vi_mode_style]
-shape = "Block"
 
 [window]
 decorations = "full"
 dynamic_padding = true
+padding = { x = 0, y = 0 }
