@@ -21,13 +21,17 @@ alias p='pnpm'
 # alias youtube='firefox --new-window https://youtube.com'
 alias weather='curl wttr.in'
 
-local headphones_mac_address="FC:E8:06:63:49:81"
+# Edifier headphones
+local old_headphones_mac_address="FC:E8:06:63:49:81"
+# Pixel buds
+local headphones_mac_address="24:95:2F:AC:D2:73"
+# JBL Clip4
 local speaker_mac_address="F8:5C:7E:5E:E9:B5"
 
-alias headphones='bluetoothctl connect FC:E8:06:63:49:81'
-alias disconnect_headphones='bluetoothctl disconnect FC:E8:06:63:49:81'
-alias speaker='bluetoothctl connect F8:5C:7E:5E:E9:B5'
-alias disconnect_speaker='bluetoothctl disconnect F8:5C:7E:5E:E9:B5'
+alias headphones="bluetoothctl connect $headphones_mac_address"
+alias disconnect_headphones="bluetoothctl disconnect $headphones_mac_address"
+alias speaker="bluetoothctl connect $speaker_mac_address"
+alias disconnect_speaker="bluetoothctl disconnect $speaker_mac_address"
 
 # shellcheck disable=SC2139,SC2086
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
