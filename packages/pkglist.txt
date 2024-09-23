@@ -2,6 +2,8 @@
 acpi
 alacritty
 alsa-utils
+anki-bin
+arandr
 autoconf
 automake
 awesome
@@ -13,6 +15,7 @@ bison
 bluez
 bluez-utils
 btop
+caddy
 chafa
 chromium
 cups
@@ -26,6 +29,8 @@ etc-update
 ethtool
 eza
 fakeroot
+fcitx-configtool
+fcitx-mozc
 fd
 feh
 firefox
@@ -45,6 +50,7 @@ gruvbox-material-icon-theme-git
 gtk-engine-murrine
 handbrake
 htop
+ibus-anthy
 icu69
 intel-ucode
 jre11-openjdk
@@ -65,6 +71,7 @@ man-pages
 mkcert
 mpc
 mpd
+mpv
 mtools
 mupdf
 musescore
@@ -77,11 +84,14 @@ nethack
 network-manager-applet
 networkmanager
 ngrok
+noto-fonts-cjk
 noto-fonts-emoji
 npm
 os-prober
 pacman-contrib
 pacutils
+paru
+paru-debug
 patch
 pavucontrol
 pfetch
@@ -90,9 +100,9 @@ pipes.sh
 pipewire-pulse
 pkgconf
 postgresql
-postman-bin
 pulseaudio-alsa
 python-pip
+qbittorrent
 ranger
 rclone
 reflector
@@ -120,12 +130,17 @@ ttf-firacode-nerd
 ttf-hack-nerd
 ueberzug
 unclutter
+unrar
 unzip
 vim
 visual-studio-code-bin
+vlc
 volumeicon
+warpinator
 wget
 which
+wine
+wine-mono
 wireless_tools
 wpa_supplicant
 xclip
