@@ -71,6 +71,8 @@ export TERMINAL="alacritty"
 export BROWSER="firefox"
 export PATH="$HOME/.rbenv/bin/:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
+# FNM (Node version manager) setup
+eval "$(fnm env --use-on-cd)"
 eval "$(rbenv init - zsh)"
 # eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
