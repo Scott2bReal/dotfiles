@@ -12,5 +12,5 @@ starship init fish | source # Nice looking prompt
 zoxide init fish | source # Smart cd
 
 # rbenv - Ruby version manager
-status --is-interactive; and source (rbenv init -|psub)
-dedup_path # Deletes multiple entries in path
+# status --is-interactive; and source (rbenv init -|psub)
+# dedup_path # Deletes multiple entries in path
