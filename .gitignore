@@ -12,3 +12,6 @@ mpd/.config/mpd/log
 mpd/.config/mpd/state
 mpd/.config/mpd/sticker.sql
 mpd/.config/mpd/playlists
+zsh/.config/zsh/.zshenv
+zsh/.config/zsh/.zsh_sessions
+zsh/.config/zsh/.zsh_history
