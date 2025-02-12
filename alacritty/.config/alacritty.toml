@@ -166,6 +166,8 @@ multiplier = 5
 decorations = "full"
 dynamic_padding = true
 padding = { x = 0, y = 0 }
+dynamic_title = true
+option_as_alt = 'Both'
 
 [window.dimensions]
 columns = 240
