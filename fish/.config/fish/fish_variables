@@ -3,7 +3,7 @@
 SETUVAR --export ANTHROPIC_API_KEY:sk\x2dant\x2dapi03\x2dCcKlSM\x2degJlJy2r7p1rDhk7zZ5D7Be02iPZxsUq8yBOmL2Sx6KEHMetL9XdD9rmv3PhJ0eitpboluraivOCzlA\x2d8LNpxgAA
 SETUVAR EDITOR:nvim
 SETUVAR SCRIPT_DIR:\x7e/scripts
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/home/scott/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e/home/scott/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e/home/scott/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e/home/scott/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e/home/scott/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
 SETUVAR _fisher_plugins:PatrickF1/fzf\x2efish
 SETUVAR fish_color_autosuggestion:747369
@@ -24,7 +24,7 @@ SETUVAR fish_color_operator:6699cc
 SETUVAR fish_color_param:d3d0c8
 SETUVAR fish_color_quote:ffcc66
 SETUVAR fish_color_redirection:d3d0c8
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
