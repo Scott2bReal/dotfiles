@@ -7,10 +7,13 @@ theme = dark:Rose Pine Moon,light:Rose Pine Dawn
 # Font #
 ########
 font-family = "FiraCode Nerd Font Ret"
+font-style-italic = false
+font-style-bold-italic = false
 font-size = 13
-font-thicken = false
+font-thicken = true
+font-thicken-strength = 200
 font-feature = -calt,-liga,-dlig
-font-synthetic-style = no-italic,no-bold-italic
+font-synthetic-style = no-bold,no-italic,no-bold-italic
 
 ##########
 # Window #
