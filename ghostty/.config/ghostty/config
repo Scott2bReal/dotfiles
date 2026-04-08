@@ -1,0 +1,22 @@
+##########
+# Colors #
+##########
+theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+
+########
+# Font #
+########
+font-family = "FiraCode Nerd Font Ret"
+font-size = 13
+font-thicken = false
+
+##########
+# Window #
+##########
+fullscreen = true
+window-theme = ghostty
+
+#########
+# MacOS #
+#########
+macos-icon = "glass"
