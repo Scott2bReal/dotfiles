@@ -4,6 +4,8 @@ alias rgr='ranger'
 alias vim='/opt/homebrew/bin/nvim'
 alias cat='bat'
 
+alias boo='ghostty +boo'
+
 alias g='lazygit'
 alias x='tmux'
 alias xs='tmux-sessionizer'
