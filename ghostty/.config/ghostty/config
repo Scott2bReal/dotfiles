@@ -16,6 +16,12 @@ font-feature = -calt,-liga,-dlig
 font-synthetic-style = no-bold,no-italic,no-bold-italic
 
 ##########
+# Cursor #
+##########
+cursor-style = bar
+cursor-style-blink = true
+
+##########
 # Window #
 ##########
 fullscreen = true
@@ -25,3 +31,4 @@ window-theme = ghostty
 # MacOS #
 #########
 macos-icon = "glass"
+macos-option-as-alt = true
