@@ -26,6 +26,7 @@ cursor-style-blink = true
 ##########
 fullscreen = true
 window-theme = ghostty
+title = " "
 
 #########
 # MacOS #
