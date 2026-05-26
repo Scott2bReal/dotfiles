@@ -1,3 +1,8 @@
+###########
+# General #
+###########
+quit-after-last-window-closed = true
+
 ##########
 # Colors #
 ##########
@@ -27,9 +32,13 @@ cursor-style-blink = true
 fullscreen = true
 window-theme = ghostty
 title = " "
+bell-features = no-system,no-audio,no-attention,no-title,no-border
+# window-decoration = none
 
 #########
 # MacOS #
 #########
 macos-icon = "glass"
 macos-option-as-alt = true
+# macos-titlebar-proxy-icon = hidden
+# macos-window-buttons = hidden
