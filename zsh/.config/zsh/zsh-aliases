@@ -41,6 +41,9 @@ alias psmem='ps auxf | sort -nr -k 4 | head -5'
 # systemd
 alias list_systemctl="systemctl list-unit-files --state=enabled"
 
+# Flush dns cache when changing from home to outside networks
+alias dns-flush="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
 # For using zsh in different OS
 # case "$(uname -s)" in
 #
